@@ -17,6 +17,10 @@ application {
     mainClass.set("app.backend.ServerKt")
 }
 
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class) {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
 kotlin {
     js(IR) {
         browser {
