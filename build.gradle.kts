@@ -14,7 +14,7 @@ repositories {
 }
 
 application {
-    mainClassName = "app.backend.ServerKt"
+    mainClass.set("app.backend.ServerKt")
 }
 
 kotlin {
