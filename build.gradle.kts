@@ -17,6 +17,12 @@ application {
     mainClass.set("app.backend.ServerKt")
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    withSourcesJar()
+}
+
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class) {
     kotlinOptions.jvmTarget = "1.8"
 }
