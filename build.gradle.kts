@@ -14,7 +14,7 @@ repositories {
 }
 
 application {
-    mainClass.set("app.backend.ServerKt")
+    mainClass.set("codes.olmsted.michael.backend.ServerKt")
 }
 
 java {
@@ -37,6 +37,19 @@ kotlin {
                         "/api/todos" to "http://localhost:8080"
                     )
                 )
+            }
+
+            testTask {
+                useKarma {
+                    useSafari()
+                }
+
+                testLogging {
+                    showExceptions = true
+                    exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+                    showCauses = true
+                    showStackTraces = true
+                }
             }
         }
     }.binaries.executable()
