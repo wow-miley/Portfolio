@@ -7,7 +7,7 @@ fun RenderContext.projectTile(
     project: Project,
 ) {
     with(project) {
-        div("project-tile") {
+        div("project-tile col") {
             h1 { +name }
             h3 { +category.name }
         }

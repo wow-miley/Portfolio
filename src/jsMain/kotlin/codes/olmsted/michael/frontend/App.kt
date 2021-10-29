@@ -81,7 +81,7 @@ fun main() {
                     }
             }
 
-        div {
+        div("content") {
             header(router)
             projects()
         }

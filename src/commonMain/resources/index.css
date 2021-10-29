@@ -2,6 +2,12 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: #f5f5f5;
+    color: #111111;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 button {
@@ -20,21 +26,12 @@ button {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.4em;
-    background: #f5f5f5;
-    color: #111111;
-    min-width: 230px;
-    max-width: 550px;
-    margin: 0 auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 300;
-}
-
 :focus {
     outline: 0;
+}
+
+#target {
+    width: 100%;
 }
 
 .hidden {
@@ -47,18 +44,31 @@ body {
     display: block;
 }
 
+.content {
+    width: 66%;
+    margin: auto;
+}
+
 .project-list {
+    margin: auto;
     padding-top: 150px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: start;
+    align-content: center;
+}
+
+.col {
+    flex: 1;
 }
 
 .project-tile {
     background: whitesmoke;
-    display: block;
-    padding: 40px;
+    padding: 32px;
+    width: 33%;
+    max-width: 300px;
     border-radius: 12px;
-    margin-bottom: 16px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1),
     0 25px 50px 0 rgba(0, 0, 0, 0.05);
 }
