@@ -8,8 +8,21 @@ fun RenderContext.projectTile(
 ) {
     with(project) {
         div("project-tile col") {
-            h1 { +name }
-            h3 { +category.name }
+            div("project-header row") {
+                img {
+                }
+
+                div("project-header col") {
+                    h1 { +name }
+                    h5 { +title }
+
+                    div("tags") {
+                        h6 { +category.name }
+                    }
+                }
+            }
+
+            p { +"developing a international blah blah" }
         }
     }
 }

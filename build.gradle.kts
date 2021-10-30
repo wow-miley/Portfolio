@@ -1,6 +1,6 @@
 plugins {
     application
-    id("dev.fritz2.fritz2-gradle") version "0.11"
+    id("dev.fritz2.fritz2-gradle") version "0.13"
     kotlin("plugin.serialization") version "1.5.10"
     kotlin("multiplatform") version "1.5.10"
 }
