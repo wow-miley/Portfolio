@@ -1,9 +1,8 @@
 package codes.olmsted.michael.frontend
 
 import codes.olmsted.michael.frontend.store.ProjectStore
-import codes.olmsted.michael.frontend.widget.projectTile
+import codes.olmsted.michael.frontend.widget.projectList
 import codes.olmsted.michael.model.Category
-import codes.olmsted.michael.model.filterBy
 import dev.fritz2.dom.html.RenderContext
 import dev.fritz2.dom.html.render
 import dev.fritz2.routing.Router
@@ -50,21 +49,6 @@ fun RenderContext.header(
     }
 }
 
-fun RenderContext.projects() {
-    section("project-list") {
-        ProjectStore.data
-            .map {  state ->
-                state.projects.filterBy(state.filterConfig)
-            }
-            .distinctUntilChanged()
-            .render { projects ->
-                projects.forEach { project ->
-                    projectTile(project)
-                }
-            }
-    }
-}
-
 @ExperimentalCoroutinesApi
 fun main() {
     val router = router(mapOf("category" to "all"))
@@ -83,78 +67,7 @@ fun main() {
 
         div("content") {
             header(router)
-            projects()
+            projectList()
         }
     }
 }
-//
-// @ExperimentalCoroutinesApi
-// fun RenderContext.mainSection() {
-//     section("main") {
-//         input("toggle-all", id = "toggle-all") {
-//             type("checkbox")
-//             checked(ToDoListStore.allChecked)
-//
-//             changes.states() handledBy ToDoListStore.toggleAll
-//         }
-//         label {
-//             `for`("toggle-all")
-//             +"Mark all as complete"
-//         }
-//         ul("todo-list") {
-//             ToDoListStore.data.combine(router.data) { all, route ->
-//                 filters[route]?.function?.invoke(all) ?: all
-//             }.renderEach(ToDo::id) { toDo ->
-//                 val toDoStore = storeOf(toDo)
-//                 toDoStore.syncBy(ToDoListStore.save)
-//                 val textStore = toDoStore.sub(L.ToDo.text)
-//                 val completedStore = toDoStore.sub(L.ToDo.completed)
-//
-//                 val editingStore = storeOf(false)
-//
-//                 li {
-//                     attr("data-id", toDoStore.id)
-//                     classMap(toDoStore.data.combine(editingStore.data) { toDo, isEditing ->
-//                         mapOf(
-//                             "completed" to toDo.completed,
-//                             "editing" to isEditing
-//                         )
-//                     })
-//                     div("view") {
-//                         input("toggle") {
-//                             type("checkbox")
-//                             checked(completedStore.data)
-//
-//                             changes.states() handledBy completedStore.update
-//                         }
-//                         label {
-//                             textStore.data.asText()
-//
-//                             dblclicks.map { true } handledBy editingStore.update
-//                         }
-//                         button("destroy") {
-//                             clicks.events.map { toDo.id } handledBy ToDoListStore.remove
-//                         }
-//                     }
-//                     input("edit") {
-//                         value(textStore.data)
-//                         changes.values() handledBy textStore.update
-//
-//                         editingStore.data.map { isEditing ->
-//                             if (isEditing) domNode.apply {
-//                                 focus()
-//                                 select()
-//                             }
-//                             isEditing.toString()
-//                         }.watch()
-//                         merge(
-//                             blurs.map { false },
-//                             keyups.key().filter { it == Keys.Enter }.map { false }
-//                         ) handledBy editingStore.update
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-//

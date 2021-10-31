@@ -10,7 +10,6 @@ version = "1.0"
 
 repositories {
     mavenCentral()
-    maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
 }
 
 application {
@@ -73,6 +72,8 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
+                implementation("dev.fritz2:core:0.13")
+                implementation("dev.fritz2:components:0.13")
             }
         }
         val commonTest by getting {
@@ -106,6 +107,10 @@ kotlin {
             }
         }
     }
+}
+
+rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin::class.java) {
+    rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().versions.webpackCli.version = "4.9.0"
 }
 
 tasks {

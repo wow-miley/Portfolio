@@ -22,6 +22,8 @@ fun RenderContext.projectTile(
                 }
             }
 
+            projectImages()
+
             p { +"developing a international blah blah" }
         }
     }
