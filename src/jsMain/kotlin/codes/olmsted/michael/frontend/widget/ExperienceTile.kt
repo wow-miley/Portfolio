@@ -9,7 +9,8 @@ fun RenderContext.experienceTile(
     with(experience) {
         div("experience-tile col") {
             div("experience-header row") {
-                img {
+                img("experience-icon") {
+                    src(iconUri)
                 }
 
                 div("experience-header col") {

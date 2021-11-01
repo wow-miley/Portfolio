@@ -12,6 +12,7 @@ data class Experience(
     val category: Category,
     val skills: Set<Skill>,
     val topics: Set<Topic>,
+    val iconUri: String,
     val imageUris: List<String>,
 )
 
@@ -33,6 +34,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.E_COMMERCE,
             Topic.UI,
         ),
+        iconUri = "/experiences/job/stockx/icon.jpeg",
         imageUris = listOf(
             "/job/stockx/load_regions.gif",
             "/job/stockx/sales_graph.gif",
@@ -56,6 +58,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UI,
             Topic.UX,
         ),
+        iconUri = "/experiences/job/trove/icon.jpeg",
         imageUris = listOf(
             "/job/trove/login.gif",
             "/job/trove/post.gif",
@@ -65,7 +68,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     ),
     Experience(
         id = 77,
-        name = "LineLeap",
+        name = "LineLeap Ticket Verification",
         title = "React Web & UI/UX Design",
         route = "/lineleap",
         summary = "",
@@ -79,6 +82,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UI,
             Topic.UX,
         ),
+        iconUri = "/experiences/freelance/lineleap/icon.png",
         imageUris = listOf(
             "/freelance/lineleap/loading.png",
             "/freelance/lineleap/confirmed.png",
@@ -102,6 +106,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UI,
             Topic.UX,
         ),
+        iconUri = "",
         imageUris = listOf(
             "/project/handotate/home.png",
             "/project/handotate/find.png",
@@ -126,6 +131,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UI,
             Topic.UX,
         ),
+        iconUri = "",
         imageUris = listOf(
             "/project/meet_up/events.png",
             "/project/meet_up/groups.png",
@@ -148,6 +154,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UI,
             Topic.UX,
         ),
+        iconUri = "",
         imageUris = listOf(
             "/project/task_tracker/classes.png",
             "/project/task_tracker/class.png",
@@ -171,6 +178,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UI,
             Topic.UX,
         ),
+        iconUri = "/experiences/project/totem/icon.png",
         imageUris = listOf(
             "/project/totem/private_feed.png",
             "/project/totem/public_feed.png",
