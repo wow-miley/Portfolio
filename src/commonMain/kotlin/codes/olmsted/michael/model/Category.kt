@@ -1,5 +1,5 @@
 package codes.olmsted.michael.model
 
-enum class Category(val route: String) {
-    JOB("job"), FREELANCE("freelance"), PROJECT("project")
+enum class Category(val displayName: String) {
+    JOB("Job"), FREELANCE("Freelance"), PROJECT("Project")
 }

@@ -25,9 +25,13 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         category = Category.JOB,
         skills = setOf(
             Skill.ANDROID,
+            Skill.KOTLIN,
+            Skill.JAVA,
+            Skill.GRAPHQL,
         ),
         topics = setOf(
             Topic.E_COMMERCE,
+            Topic.UI,
         ),
         imageUris = listOf(
             "/job/stockx/load_regions.gif",
@@ -38,15 +42,19 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(
         id = 1234,
         name = "Trove",
-        title = "Android Software Engineer II",
+        title = "Android Engineering Intern",
         route = "/trove",
         summary = "Developed a native Android application in Kotlin using RxJava with a Redux architecture. Focused on UI/UX implementation of features including reusable components, animations, and development of a platform style guide.",
         category = Category.JOB,
         skills = setOf(
             Skill.ANDROID,
+            Skill.KOTLIN,
+            Skill.JAVA,
         ),
         topics = setOf(
-            Topic.E_COMMERCE,
+            Topic.CHAT,
+            Topic.UI,
+            Topic.UX,
         ),
         imageUris = listOf(
             "/job/trove/login.gif",
@@ -58,15 +66,18 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(
         id = 77,
         name = "LineLeap",
-        title = "Android Software Engineer II",
+        title = "React Web & UI/UX Design",
         route = "/lineleap",
         summary = "",
         category = Category.FREELANCE,
         skills = setOf(
-            Skill.ANDROID,
+            Skill.REACT,
+            Skill.JAVASCRIPT,
+            Skill.AWS,
         ),
         topics = setOf(
-            Topic.E_COMMERCE,
+            Topic.UI,
+            Topic.UX,
         ),
         imageUris = listOf(
             "/freelance/lineleap/loading.png",
@@ -77,15 +88,19 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(
         id = 12345,
         name = "handotate",
-        title = "Android Software Engineer II",
+        title = "Native Android & UI/UX Design",
         route = "/handotate",
         summary = "",
         category = Category.PROJECT,
         skills = setOf(
             Skill.ANDROID,
+            Skill.KOTLIN,
+            Skill.SQL,
+            Skill.AWS,
         ),
         topics = setOf(
-            Topic.E_COMMERCE,
+            Topic.UI,
+            Topic.UX,
         ),
         imageUris = listOf(
             "/project/handotate/home.png",
@@ -96,15 +111,20 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(
         id = 12345,
         name = "Meet^",
-        title = "Android Software Engineer II",
+        title = "React Native Android+iOS & UI/UX Design",
         route = "/meet_up",
         summary = "",
         category = Category.PROJECT,
         skills = setOf(
-            Skill.ANDROID,
+            Skill.REACT_NATIVE,
+            Skill.FIREBASE,
+            Skill.JAVASCRIPT,
+            Skill.NODEJS,
         ),
         topics = setOf(
-            Topic.E_COMMERCE,
+            Topic.CHAT,
+            Topic.UI,
+            Topic.UX,
         ),
         imageUris = listOf(
             "/project/meet_up/events.png",
@@ -115,15 +135,18 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(
         id = 12345,
         name = "TaskTracker",
-        title = "Android Software Engineer II",
+        title = "React Web & UI/UX Design",
         route = "/task_tracker",
         summary = "",
         category = Category.PROJECT,
         skills = setOf(
-            Skill.ANDROID,
+            Skill.REACT,
+            Skill.JAVASCRIPT,
+            Skill.AWS,
         ),
         topics = setOf(
-            Topic.E_COMMERCE,
+            Topic.UI,
+            Topic.UX,
         ),
         imageUris = listOf(
             "/project/task_tracker/classes.png",
@@ -134,15 +157,19 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(
         id = 12345,
         name = "Totem",
-        title = "Android Software Engineer II",
+        title = "Native Android & UI/UX Design",
         route = "/totem",
         summary = "Developed a native Android application in Kotlin using RxJava and Dagger. Also responsible for the UI design, API design, and overall technology management of the company.",
         category = Category.PROJECT,
         skills = setOf(
             Skill.ANDROID,
+            Skill.KOTLIN,
+            Skill.AWS,
+            Skill.FIREBASE,
         ),
         topics = setOf(
-            Topic.E_COMMERCE,
+            Topic.UI,
+            Topic.UX,
         ),
         imageUris = listOf(
             "/project/totem/private_feed.png",

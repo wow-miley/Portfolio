@@ -2,7 +2,7 @@ package codes.olmsted.michael.model
 
 enum class Topic {
     E_COMMERCE,
-    MESSAGING,
+    CHAT,
     UI,
     UX,
 }

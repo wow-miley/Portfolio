@@ -38,7 +38,7 @@
     border-radius: 32px;
     object-fit: cover;
     object-position: 0 0;
-    border: solid #cacaca;
+    border: 2px solid #cacaca;
 }
 
 .thumbnail img::before {

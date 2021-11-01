@@ -17,35 +17,36 @@ fun RenderContext.header(
         h2 { +"Michael Olmsted" }
         h4 { +"Software Engineer" }
 
-        nav {
-            ul {
-                Category
-                    .values()
-                    .map { it.route }
-                    .forEach { route ->
-                        li {
-                            a {
-                                +route
-
-                                ExperienceStore.data
-                                    .map { it.filterConfig?.selectedCategory }
-                                    .distinctUntilChanged()
-                                    .render { category ->
-                                        className(
-                                            if (category?.route == route) "selected" else ""
-                                        )
-                                    }
-
-                                clicks.map {
-                                    mapOf(
-                                        "category" to route
-                                    )
-                                } handledBy router.navTo
-                            }
-                        }
-                    }
-            }
-        }
+        // TODO: Add filtering
+        // nav {
+        //     ul {
+        //         Category
+        //             .values()
+        //             .map { it.displayName }
+        //             .forEach { route ->
+        //                 li {
+        //                     a {
+        //                         +route
+        //
+        //                         ExperienceStore.data
+        //                             .map { it.filterConfig?.selectedCategory }
+        //                             .distinctUntilChanged()
+        //                             .render { category ->
+        //                                 className(
+        //                                     if (category?.displayName == route) "selected" else ""
+        //                                 )
+        //                             }
+        //
+        //                         clicks.map {
+        //                             mapOf(
+        //                                 "category" to route
+        //                             )
+        //                         } handledBy router.navTo
+        //                     }
+        //                 }
+        //             }
+        //     }
+        // }
     }
 }
 

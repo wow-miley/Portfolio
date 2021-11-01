@@ -92,8 +92,8 @@ button {
     display: block;
     position: fixed;
     left: 0;
-    padding-top: 24px;
-    padding-bottom: 32px;
+    padding-top: 20px;
+    padding-bottom: 24px;
     width: 100%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
     0 25px 50px 0 rgba(0, 0, 0, 0.1);
@@ -142,7 +142,7 @@ button {
 }
 
 .experience-list {
-    padding-top: 160px;
+    padding-top: 112px;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
@@ -163,6 +163,7 @@ button {
 .divider {
     background: #cacaca;
     height: 1px;
+    margin-top: 8px;
     width: 100%;
 }
 
@@ -188,14 +189,34 @@ button {
 
 .tags {
     display: inline-flex;
+    flex-direction: row;
+    gap: 4px;
     margin-top: 8px;
 }
 
 .tags h6 {
     padding: 4px 12px;
-    border-radius: 8px;
+    border-radius: 12px;
+}
+
+.tags.job h6 {
+    background: #F2DCD9;
+    color: #E94F37;
+}
+
+.tags.freelance h6 {
     background: #DAD4F7;
     color: #5438DC;
+}
+
+.tags.project h6 {
+    background: #DDF4FD;
+    color: #20A6DF;
+}
+
+.tags .skill h6 {
+    background: #E9E7E2;
+    color: #999999;
 }
 
 .hidden {

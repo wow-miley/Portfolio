@@ -16,8 +16,14 @@ fun RenderContext.experienceTile(
                     h1 { +name }
                     h5 { +title }
 
-                    div("tags") {
-                        h6 { +category.name }
+                    div("tags ${category.name.lowercase()}") {
+                        h6 { +category.displayName }
+
+                        skills.forEach { skill ->
+                            div("skill") {
+                                h6 { +skill.displayName }
+                            }
+                        }
                     }
                 }
             }
