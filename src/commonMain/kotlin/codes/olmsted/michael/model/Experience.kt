@@ -11,6 +11,7 @@ data class Experience(
     val category: Category,
     val skills: Set<Skill>,
     val topics: Set<Topic>,
+    val imageUris: List<String>,
 )
 
 val STUB_EXPERIENCES: List<Experience> = listOf(
@@ -25,7 +26,12 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         ),
         topics = setOf(
             Topic.E_COMMERCE,
-        )
+        ),
+        imageUris = listOf(
+            "/job/stockx/load_regions.gif",
+            "/job/stockx/sales_graph.gif",
+            "/job/stockx/product_transition.gif",
+        ),
     ),
     Experience(
         id = 1234,
@@ -38,7 +44,13 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         ),
         topics = setOf(
             Topic.E_COMMERCE,
-        )
+        ),
+        imageUris = listOf(
+            "/job/trove/login.gif",
+            "/job/trove/post.gif",
+            "/job/trove/search.gif",
+            "/job/trove/chat.png",
+        ),
     ),
     Experience(
         id = 77,
@@ -51,7 +63,12 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         ),
         topics = setOf(
             Topic.E_COMMERCE,
-        )
+        ),
+        imageUris = listOf(
+            "/freelance/lineleap/loading.png",
+            "/freelance/lineleap/confirmed.png",
+            "/freelance/lineleap/denied.png",
+        ),
     ),
     Experience(
         id = 12345,
@@ -64,33 +81,48 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         ),
         topics = setOf(
             Topic.E_COMMERCE,
-        )
+        ),
+        imageUris = listOf(
+            "/project/handotate/home.png",
+            "/project/handotate/find.png",
+            "/project/handotate/account.png",
+        ),
     ),
     Experience(
         id = 12345,
         name = "Meet^",
         title = "Android Software Engineer II",
-        route = "/meetup",
+        route = "/meet_up",
         category = Category.PROJECT,
         skills = setOf(
             Skill.ANDROID,
         ),
         topics = setOf(
             Topic.E_COMMERCE,
-        )
+        ),
+        imageUris = listOf(
+            "/project/meet_up/events.png",
+            "/project/meet_up/groups.png",
+            "/project/meet_up/chat.png",
+        ),
     ),
     Experience(
         id = 12345,
         name = "TaskTracker",
         title = "Android Software Engineer II",
-        route = "/tasktracker",
+        route = "/task_tracker",
         category = Category.PROJECT,
         skills = setOf(
             Skill.ANDROID,
         ),
         topics = setOf(
             Topic.E_COMMERCE,
-        )
+        ),
+        imageUris = listOf(
+            "/project/task_tracker/classes.png",
+            "/project/task_tracker/class.png",
+            "/project/task_tracker/assignments.png",
+        ),
     ),
     Experience(
         id = 12345,
@@ -103,6 +135,11 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         ),
         topics = setOf(
             Topic.E_COMMERCE,
-        )
+        ),
+        imageUris = listOf(
+            "/project/totem/private_feed.png",
+            "/project/totem/public_feed.png",
+            "/project/totem/refactor.png",
+        ),
     ),
 )

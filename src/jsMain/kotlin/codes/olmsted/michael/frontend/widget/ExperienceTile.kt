@@ -22,7 +22,7 @@ fun RenderContext.experienceTile(
                 }
             }
 
-            experienceImages()
+            experienceImages(imageUris)
 
             p { +"developing a international blah blah" }
         }
