@@ -1,7 +1,7 @@
 package codes.olmsted.michael.frontend
 
-import codes.olmsted.michael.frontend.store.ProjectStore
-import codes.olmsted.michael.frontend.widget.projectList
+import codes.olmsted.michael.frontend.store.ExperienceStore
+import codes.olmsted.michael.frontend.widget.experienceList
 import codes.olmsted.michael.model.Category
 import dev.fritz2.dom.html.RenderContext
 import dev.fritz2.dom.html.render
@@ -27,7 +27,7 @@ fun RenderContext.header(
                             a {
                                 +route
 
-                                ProjectStore.data
+                                ExperienceStore.data
                                     .map { it.filterConfig?.selectedCategory }
                                     .distinctUntilChanged()
                                     .render { category ->
@@ -61,13 +61,13 @@ fun main() {
                 it["category"]
                     ?.let(Category::valueOf)
                     ?.let { category ->
-                        ProjectStore.setSelectedCategory(category)
+                        ExperienceStore.setSelectedCategory(category)
                     }
             }
 
         div("content") {
             header(router)
-            projectList()
+            experienceList()
         }
     }
 }

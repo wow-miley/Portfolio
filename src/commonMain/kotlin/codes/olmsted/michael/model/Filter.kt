@@ -6,7 +6,7 @@ data class FilterConfig(
     val selectedTopics: Set<Topic>?,
 )
 
-fun List<Project>.filterBy(filterConfig: FilterConfig?): List<Project> =
+fun List<Experience>.filterBy(filterConfig: FilterConfig?): List<Experience> =
     filter { project ->
         filterConfig?.let { config ->
             val categoryCheck = config.selectedCategory?.let { project.category == it } ?: true

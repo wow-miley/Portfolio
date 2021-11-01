@@ -136,14 +136,14 @@ button {
     border-color: rgba(175, 47, 47, 0.2);
 }
 
-.project-list {
+.experience-list {
     padding-top: 160px;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
 
-.project-tile {
+.experience-tile {
     display: inline-flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -155,17 +155,17 @@ button {
     0 25px 50px 0 rgba(0, 0, 0, 0.05);
 }
 
-.project-tile h1 {
+.experience-tile h1 {
     min-width: 230px;
     max-width: 550px;
 }
 
-.project-header .row {
+.experience-header .row {
     display: inline-flex;
     flex-direction: row;
 }
 
-.project-header .col {
+.experience-header .col {
     display: inline-flex;
     flex-direction: column;
 }

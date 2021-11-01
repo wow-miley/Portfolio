@@ -1,6 +1,6 @@
 /* Inspiration taken from https://codepen.io/nebo/pen/ONXejO and https://codepen.io/alchatti/pen/NOdzLO */
 
-.project-gallery {
+.experience-gallery {
     display: inline-flex;
     flex-wrap: wrap;
     padding-top: 20px;
@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-.project-gallery * {
+.experience-gallery * {
     box-sizing: border-box;
 }
 
@@ -31,8 +31,11 @@
 .thumbnails img {
     width: 33vw;
     max-width: 250px;
-    height: auto;
+    height: 33vw;
+    max-height: 250px;
     border-radius: 32px;
+    object-fit: cover;
+    object-position: 0 0;
 }
 
 /*.thumbnails ul li::before {*/
