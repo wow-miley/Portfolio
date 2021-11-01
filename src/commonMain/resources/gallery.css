@@ -10,6 +10,8 @@
 
 .experience-gallery * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .transition {
@@ -19,7 +21,7 @@
     -webkit-transition: all 0.5s ease;
 }
 
-.thumbnails {
+.thumbnail-list {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -28,7 +30,7 @@
     gap: 16px;
 }
 
-.thumbnails img {
+.thumbnail img {
     width: 33vw;
     max-width: 250px;
     height: 33vw;
@@ -38,23 +40,22 @@
     object-position: 0 0;
 }
 
-/*.thumbnails ul li::before {*/
-/*    width: 200px;*/
-/*    height: 200px;*/
-/*    background-color: #000;*/
-/*    content: '';*/
-/*    color: white;*/
-/*    opacity: 0.4;*/
-/*    text-align: center;*/
-/*    box-sizing: border-box;*/
-/*    pointer-events: none;*/
-/*    transition: all 0.5s ease;*/
-/*    -moz-transition: all 0.5s ease;*/
-/*    -o-transition: all 0.5s ease;*/
-/*    -webkit-transition: all 0.5s ease;*/
-/*}*/
+.thumbnail img::before {
+    width: available;
+    height: available;
+    background-color: #000;
+    content: '';
+    color: white;
+    opacity: 0.4;
+    text-align: center;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
 
-.thumbnails img:hover::before {
+.thumbnail img:hover::before {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.90);
 }
@@ -73,8 +74,8 @@
 }
 
 .lightbox img {
-    max-width: 10%;
-    max-height: 10%;
+    max-width: 90%;
+    max-height: 80%;
     transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -92,10 +93,10 @@
     -webkit-transition: all 0.5s ease;
 }
 
-.lightbox:target img {
-    top: 50%;
-    transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-}
+/*.lightbox:target img {*/
+/*    top: 0;*/
+/*    transform: translateY(-25%);*/
+/*    -moz-transform: translateY(-25%);*/
+/*    -o-transform: translateY(-25%);*/
+/*    -webkit-transform: translateY(-25%);*/
+/*}*/

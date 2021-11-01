@@ -6,9 +6,9 @@ fun RenderContext.experienceImages(
     imageUris: List<String>,
 ) {
     div("experience-gallery") {
-        div("thumbnails") {
+        div("thumbnail-list") {
             imageUris.forEachIndexed { index, uri ->
-                a {
+                a("thumbnail") {
                     href("#$uri")
                     img {
                         src("/experiences$uri")
@@ -17,6 +17,9 @@ fun RenderContext.experienceImages(
 
                 a("lightbox transition", uri) {
                     href("#_1")
+                    img {
+                        src("/experiences$uri")
+                    }
                 }
             }
         }
