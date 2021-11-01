@@ -7,7 +7,7 @@ fun RenderContext.experienceTile(
     experience: Experience,
 ) {
     with(experience) {
-        div("experience-tile col") {
+        div("experience-tile col Grid-cell") {
             div("experience-header row") {
                 img("experience-icon") {
                     src(iconUri)

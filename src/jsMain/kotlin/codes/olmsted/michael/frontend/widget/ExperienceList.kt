@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 
 fun RenderContext.experienceList() {
-    section("experience-list") {
+    div("experience-list Grid") {
         ExperienceStore.data
             .map {  state ->
                 state.experiences.filterBy(state.filterConfig)

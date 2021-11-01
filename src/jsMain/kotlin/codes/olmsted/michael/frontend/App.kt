@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.*
 fun RenderContext.header(
     router: Router<Map<String, String>>,
 ) {
-    section("categories") {
+    div("categories") {
         h2 { +"Michael Olmsted" }
         h4 { +"Software Engineer" }
 
