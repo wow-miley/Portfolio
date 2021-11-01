@@ -22,9 +22,11 @@ fun RenderContext.experienceTile(
                 }
             }
 
+            div("divider") {}
+
             experienceImages(imageUris)
 
-            p { +"developing a international blah blah" }
+            p { +summary }
         }
     }
 }

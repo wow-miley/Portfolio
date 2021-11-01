@@ -8,6 +8,7 @@ data class Experience(
     val name: String,
     val title: String,
     val route: String,
+    val summary: String,
     val category: Category,
     val skills: Set<Skill>,
     val topics: Set<Topic>,
@@ -20,6 +21,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         name = "StockX",
         title = "Android Software Engineer II",
         route = "/stockx",
+        summary = "Developing a native Android application in Kotlin using MVVM, Coroutines, Flow, and Clean Architecture. Working in a legacy Java codebase and introducing new features in Kotlin. Involved in checkout, payment, and internationalization feature work.",
         category = Category.JOB,
         skills = setOf(
             Skill.ANDROID,
@@ -38,6 +40,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         name = "Trove",
         title = "Android Software Engineer II",
         route = "/trove",
+        summary = "Developed a native Android application in Kotlin using RxJava with a Redux architecture. Focused on UI/UX implementation of features including reusable components, animations, and development of a platform style guide.",
         category = Category.JOB,
         skills = setOf(
             Skill.ANDROID,
@@ -57,6 +60,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         name = "LineLeap",
         title = "Android Software Engineer II",
         route = "/lineleap",
+        summary = "",
         category = Category.FREELANCE,
         skills = setOf(
             Skill.ANDROID,
@@ -75,6 +79,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         name = "handotate",
         title = "Android Software Engineer II",
         route = "/handotate",
+        summary = "",
         category = Category.PROJECT,
         skills = setOf(
             Skill.ANDROID,
@@ -93,6 +98,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         name = "Meet^",
         title = "Android Software Engineer II",
         route = "/meet_up",
+        summary = "",
         category = Category.PROJECT,
         skills = setOf(
             Skill.ANDROID,
@@ -111,6 +117,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         name = "TaskTracker",
         title = "Android Software Engineer II",
         route = "/task_tracker",
+        summary = "",
         category = Category.PROJECT,
         skills = setOf(
             Skill.ANDROID,
@@ -129,6 +136,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         name = "Totem",
         title = "Android Software Engineer II",
         route = "/totem",
+        summary = "Developed a native Android application in Kotlin using RxJava and Dagger. Also responsible for the UI design, API design, and overall technology management of the company.",
         category = Category.PROJECT,
         skills = setOf(
             Skill.ANDROID,

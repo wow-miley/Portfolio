@@ -14,6 +14,11 @@ body {
     -webkit-appearance: none;
 }
 
+p {
+    font: 16px 'Karla', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+}
+
 h1 {
     margin: 0;
     padding: 0;
@@ -155,14 +160,25 @@ button {
     0 25px 50px 0 rgba(0, 0, 0, 0.05);
 }
 
+.divider {
+    background: #cacaca;
+    height: 1px;
+    width: 100%;
+}
+
 .experience-tile h1 {
     min-width: 230px;
     max-width: 550px;
 }
 
+.experience-tile p {
+    margin-top: 32px;
+}
+
 .experience-header .row {
     display: inline-flex;
     flex-direction: row;
+    padding-bottom: 8px;
 }
 
 .experience-header .col {
