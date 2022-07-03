@@ -37,28 +37,12 @@ kotlin {
                     )
                 )
             }
-
-            testTask {
-                useKarma {
-                    useSafari()
-                }
-
-                testLogging {
-                    showExceptions = true
-                    exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
-                    showCauses = true
-                    showStackTraces = true
-                }
-            }
         }
     }.binaries.executable()
 
     jvm {
         compilations.all {
             kotlinOptions.jvmTarget = "1.8"
-        }
-        testRuns["test"].executionTask.configure {
-            useJUnit()
         }
     }
 
