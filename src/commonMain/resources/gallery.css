@@ -24,7 +24,7 @@
 .thumbnail-list {
     display: inline-flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: max-content;
     justify-content: center;
     gap: 16px;

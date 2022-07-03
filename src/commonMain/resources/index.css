@@ -204,7 +204,7 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4px;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .tags h6 {
@@ -228,8 +228,9 @@ button {
 }
 
 .tags .skill h6 {
-    background: #E9E7E2;
+    background: #FFF;
     color: #999999;
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .content {

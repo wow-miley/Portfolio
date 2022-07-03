@@ -116,7 +116,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(
         id = 12345,
         name = "Meet^",
-        title = "React Native Android+iOS & UI/UX Design",
+        title = "React Native Android/iOS & UI/UX Design",
         route = "/meet_up",
         summary = "",
         category = Category.PROJECT,
