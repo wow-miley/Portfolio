@@ -93,7 +93,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         iconUri = "/experiences/freelance/lineleap/icon.png",
         imageUris = listOf(
             "/freelance/lineleap/loading.png",
-            "/freelance/lineleap/confirmed.png",
+            // "/freelance/lineleap/confirmed.png",
             "/freelance/lineleap/denied.png",
         ),
     ),
@@ -119,7 +119,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         iconUri = "",
         imageUris = listOf(
             "/project/handotate/home.png",
-            "/project/handotate/find.png",
+            // "/project/handotate/find.png",
             "/project/handotate/account.png",
         ),
     ),
@@ -146,7 +146,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         iconUri = "",
         imageUris = listOf(
             "/project/meet_up/events.png",
-            "/project/meet_up/groups.png",
+            // "/project/meet_up/groups.png",
             "/project/meet_up/chat.png",
         ),
     ),
@@ -170,7 +170,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         ),
         iconUri = "",
         imageUris = listOf(
-            "/project/task_tracker/classes.png",
+            // "/project/task_tracker/classes.png",
             "/project/task_tracker/class.png",
             "/project/task_tracker/assignments.png",
         ),

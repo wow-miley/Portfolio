@@ -195,6 +195,7 @@ button {
 
 .experience-header.col {
     display: inline-flex;
+    flex: 1;
     flex-direction: column;
     margin-left: 12px;
 }
@@ -211,7 +212,7 @@ button {
     border-radius: 32px;
     padding: 4px 12px;
     color: #FFFFFF;
-    background: #575757;
+    background: #999999;
 }
 
 .date-range.active {
@@ -256,10 +257,6 @@ button {
     padding: 0 10vw;
 }
 
-.col {
-    flex: 1;
-}
-
 .main {
     position: relative;
     z-index: 2;
@@ -300,6 +297,40 @@ button {
 /* From https://philipwalton.github.io/solved-by-flexbox/demos/grids/ */
 .Grid {
     display: flex;
+}
+
+.Grid-cell {
+    flex: 1;
+}
+
+/* With gutters */
+.Grid--gutters {
+    margin: -1em 0 0 -1em;
+}
+.Grid--gutters > .Grid-cell {
+    padding: 1em 0 0 1em;
+}
+
+/* Alignment per row */
+.Grid--top {
+    align-items: flex-start;
+}
+.Grid--bottom {
+    align-items: flex-end;
+}
+.Grid--center {
+    align-items: center;
+}
+
+/* Alignment per cell */
+.Grid-cell--top {
+    align-self: flex-start;
+}
+.Grid-cell--bottom {
+    align-self: flex-end;
+}
+.Grid-cell--center {
+    align-self: center;
 }
 
 /* Base classes for all media */
