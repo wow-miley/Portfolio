@@ -3,6 +3,19 @@ package codes.olmsted.michael.frontend.widget
 import codes.olmsted.michael.model.Experience
 import dev.fritz2.dom.html.RenderContext
 
+private val Experience.dateRange: String
+get() = when {
+    endYear == null -> "$startYear - Now"
+    startYear == endYear -> "$startYear"
+    else -> "$startYear - $endYear"
+}
+
+private val Experience.isActive: String
+get() = when (endYear) {
+    null -> "active"
+    else -> ""
+}
+
 fun RenderContext.experienceTile(
     experience: Experience,
 ) {
@@ -14,7 +27,11 @@ fun RenderContext.experienceTile(
                 }
 
                 div("experience-header col") {
-                    h1 { +name }
+                    div("experience-header title-row") {
+                        h1 { +name }
+                        h6("date-range $isActive") { +dateRange }
+                    }
+
                     h5 { +title }
 
                     div("tags ${category.name.lowercase()}") {

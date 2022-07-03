@@ -5,6 +5,8 @@ import dev.fritz2.lenses.Lenses
 @Lenses
 data class Experience(
     val id: Long,
+    val startYear: Int,
+    val endYear: Int?,
     val name: String,
     val title: String,
     val route: String,
@@ -19,6 +21,8 @@ data class Experience(
 val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(
         id = 123,
+        startYear = 2019,
+        endYear = null,
         name = "StockX",
         title = "Android Software Engineer II",
         route = "/stockx",
@@ -43,6 +47,8 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     ),
     Experience(
         id = 1234,
+        startYear = 2018,
+        endYear = 2019,
         name = "Trove",
         title = "Android Engineering Intern",
         route = "/trove",
@@ -68,7 +74,9 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     ),
     Experience(
         id = 77,
-        name = "LineLeap Ticket Verification",
+        startYear = 2018,
+        endYear = 2018,
+        name = "LineLeap Tickets",
         title = "React Web & UI/UX Design",
         route = "/lineleap",
         summary = "",
@@ -91,6 +99,8 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     ),
     Experience(
         id = 12345,
+        startYear = 2019,
+        endYear = 2019,
         name = "handotate",
         title = "Native Android & UI/UX Design",
         route = "/handotate",
@@ -115,6 +125,8 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     ),
     Experience(
         id = 12345,
+        startYear = 2019,
+        endYear = 2019,
         name = "Meet^",
         title = "React Native Android/iOS & UI/UX Design",
         route = "/meet_up",
@@ -140,6 +152,8 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     ),
     Experience(
         id = 12345,
+        startYear = 2018,
+        endYear = 2018,
         name = "TaskTracker",
         title = "React Web & UI/UX Design",
         route = "/task_tracker",
@@ -163,6 +177,8 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
     ),
     Experience(
         id = 12345,
+        startYear = 2017,
+        endYear = 2018,
         name = "Totem",
         title = "Native Android & UI/UX Design",
         route = "/totem",
