@@ -76,12 +76,6 @@ kotlin {
                 implementation("dev.fritz2:components:0.13")
             }
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
-            }
-        }
         val jvmMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-server-netty:$ktorVersion")
@@ -94,17 +88,7 @@ kotlin {
                 implementation("com.h2database:h2:$h2Version")
             }
         }
-        val jvmTest by getting {
-            dependencies {
-                implementation(kotlin("test-junit"))
-            }
-        }
         val jsMain by getting {
-        }
-        val jsTest by getting {
-            dependencies {
-                implementation(kotlin("test-js"))
-            }
         }
     }
 }
