@@ -153,7 +153,7 @@ button {
     flex-direction: column;
     flex-wrap: wrap;
     background: white;
-    padding: 24px;
+    padding: 20px;
     max-width: 100%;
     border-radius: 12px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1),
@@ -161,15 +161,15 @@ button {
 }
 
 .experience-icon {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 64px;
     background: #CACACA;
     object-fit: contain;
 }
 
 .divider {
-    background: #cacaca;
+    background: #D9D9D9;
     height: 1px;
     margin-top: 8px;
     width: 100%;
@@ -179,6 +179,7 @@ button {
     line-height: 1.1;
     min-width: 230px;
     max-width: 550px;
+    margin-top: 4px;
 }
 
 .experience-tile p {
@@ -191,6 +192,7 @@ button {
     flex-direction: row;
     padding-bottom: 8px;
     justify-content: space-around;
+    vertical-align: center;
 }
 
 .experience-header.col {
@@ -208,8 +210,8 @@ button {
 }
 
 .tags h6 {
-    padding: 4px 12px;
-    border-radius: 12px;
+    padding: 2px 12px;
+    border-radius: 8px;
 }
 
 .tags.job h6 {
