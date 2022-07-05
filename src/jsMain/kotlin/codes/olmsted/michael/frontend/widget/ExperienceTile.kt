@@ -21,36 +21,38 @@ fun RenderContext.experienceTile(
 ) {
     with(experience) {
         div("experience-tile Grid-cell") {
-            div("experience-header row") {
-                img("experience-icon") {
-                    src(iconUri)
-                }
-
-                div("experience-header col") {
-                    div("experience-header title-row") {
-                        h1 { +name }
-                        h6("date-range $isActive") { +dateRange }
+            div("experience-content") {
+                div("experience-header row") {
+                    img("experience-icon") {
+                        src(iconUri)
                     }
 
-                    h5 { +title }
+                    div("experience-header col") {
+                        div("experience-header title-row") {
+                            h1 { +name }
+                            h6("date-range $isActive") { +dateRange }
+                        }
 
-                    div("tags ${category.name.lowercase()}") {
-                        h6 { +category.displayName }
+                        h5 { +title }
 
-                        skills.forEach { skill ->
-                            div("skill") {
-                                h6 { +skill.displayName }
+                        div("tags ${category.name.lowercase()}") {
+                            h6 { +category.displayName }
+
+                            skills.forEach { skill ->
+                                div("skill") {
+                                    h6 { +skill.displayName }
+                                }
                             }
                         }
                     }
                 }
+
+                div("experience-gallery") {
+                    experienceImages(imageUris)
+                }
+
+                p("experience-info") { +summary }
             }
-
-            div("divider") {}
-
-            experienceImages(imageUris)
-
-            p { +summary }
         }
     }
 }
