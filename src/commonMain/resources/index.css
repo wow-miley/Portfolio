@@ -177,7 +177,6 @@ button {
     width: 52px;
     height: 52px;
     border-radius: 64px;
-    background: #CACACA;
     object-fit: contain;
 }
 
@@ -213,7 +212,7 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .experience-gallery {

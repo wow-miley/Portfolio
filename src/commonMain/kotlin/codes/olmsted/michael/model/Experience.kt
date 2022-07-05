@@ -268,7 +268,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UI,
             Topic.UX,
         ),
-        iconUri = "",
+        iconUri = "/experiences/project/artabletop/icon.png",
         imageUris = listOf(
             "/project/artabletop/move_range.jpg",
             "/project/artabletop/tabletop.jpg",
