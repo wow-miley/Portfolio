@@ -15,7 +15,7 @@ fun RenderContext.header(
 ) {
     div("categories") {
         h2 { +"Michael Olmsted" }
-        h4 { +"Software Engineer" }
+        h4 { +"Native Android Application Engineer" }
 
         // TODO: Add filtering
         // nav {
