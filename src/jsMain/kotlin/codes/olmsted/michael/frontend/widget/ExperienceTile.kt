@@ -48,7 +48,7 @@ fun RenderContext.experienceTile(
                 }
 
                 div("experience-gallery") {
-                    experienceImages(imageUris)
+                    experienceGallery(media)
                 }
 
                 p("experience-info") { +summary }

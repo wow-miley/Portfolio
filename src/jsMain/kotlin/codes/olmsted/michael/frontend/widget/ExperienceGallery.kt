@@ -1,23 +1,33 @@
 package codes.olmsted.michael.frontend.widget
 
+import codes.olmsted.michael.model.Media
 import dev.fritz2.dom.html.RenderContext
 
-fun RenderContext.experienceImages(
-    imageUris: List<String>,
+fun RenderContext.experienceGallery(
+    media: List<Media>,
 ) {
     div("thumbnail-list") {
-        imageUris.forEach { uri ->
-            a("thumbnail") {
-                href("#$uri")
-                img {
-                    src("/experiences$uri")
+        media.forEach { item ->
+            div("thumbnail") {
+                a {
+                    href("#${item.uri}")
+                    img {
+                        src("/experiences${item.uri}")
+                    }
+                }
+
+                if (item is Media.Gif) {
+                    h3("tag") { +"GIF" }
                 }
             }
 
-            a("lightbox transition", uri) {
+            a("lightbox transition", item.uri) {
                 href("#_1")
                 img {
-                    src("/experiences$uri")
+                    when (item) {
+                        is Media.Image -> src("/experiences${item.uri}")
+                        is Media.Gif -> src("/experiences${item.gifUri}")
+                    }
                 }
             }
         }

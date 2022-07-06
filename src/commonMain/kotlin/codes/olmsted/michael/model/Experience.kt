@@ -15,7 +15,7 @@ data class Experience(
     val skills: Set<Skill>,
     val topics: Set<Topic>,
     val iconUri: String,
-    val imageUris: List<String>,
+    val media: List<Media>,
 )
 
 val STUB_EXPERIENCES: List<Experience> = listOf(
@@ -39,10 +39,19 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UI,
         ),
         iconUri = "/experiences/job/stockx/icon.jpeg",
-        imageUris = listOf(
-            "/job/stockx/load_regions.gif",
-            "/job/stockx/sales_graph.gif",
-            "/job/stockx/product_transition.gif",
+        media = listOf(
+            Media.Gif(
+                uri = "/job/stockx/load_regions_thumb.png",
+                gifUri = "/job/stockx/load_regions.gif",
+            ),
+            Media.Gif(
+                uri = "/job/stockx/sales_graph_thumb.png",
+                gifUri = "/job/stockx/sales_graph.gif",
+            ),
+            Media.Gif(
+                uri = "/job/stockx/product_transition_thumb.png",
+                gifUri = "/job/stockx/product_transition.gif",
+            ),
         ),
     ),
     Experience(
@@ -65,8 +74,8 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/freelance/ateam/icon.svg",
-        imageUris = listOf(
-            "/freelance/ateam/nda.png"
+        media = listOf(
+            Media.Image("/freelance/ateam/nda.png"),
         ),
     ),
     Experience(
@@ -89,11 +98,20 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/job/trove/icon.jpeg",
-        imageUris = listOf(
-            "/job/trove/login.gif",
-            "/job/trove/post.gif",
-            "/job/trove/search.gif",
-            "/job/trove/chat.png",
+        media = listOf(
+            Media.Gif(
+                uri = "/job/trove/login_thumb.png",
+                gifUri = "/job/trove/login.gif",
+            ),
+            Media.Gif(
+                uri = "/job/trove/post_thumb.png",
+                gifUri = "/job/trove/post.gif"
+            ),
+            Media.Gif(
+                uri = "/job/trove/search_thumb.png",
+                gifUri = "/job/trove/search.gif"
+            ),
+            Media.Image("/job/trove/chat.png"),
         ),
     ),
     Experience(
@@ -116,10 +134,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/project/handotate/icon.png",
-        imageUris = listOf(
-            "/project/handotate/home.png",
-            "/project/handotate/find.png",
-            "/project/handotate/account.png",
+        media = listOf(
+            Media.Image("/project/handotate/home.png"),
+            Media.Image("/project/handotate/find.png"),
+            Media.Image("/project/handotate/account.png"),
         ),
     ),
     Experience(
@@ -143,10 +161,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/project/meet_up/icon.png",
-        imageUris = listOf(
-            "/project/meet_up/events.png",
-            "/project/meet_up/groups.png",
-            "/project/meet_up/chat.png",
+        media = listOf(
+            Media.Image("/project/meet_up/events.png"),
+            Media.Image("/project/meet_up/groups.png"),
+            Media.Image("/project/meet_up/chat.png"),
         ),
     ),
     Experience(
@@ -168,10 +186,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/freelance/lineleap/icon.png",
-        imageUris = listOf(
-            "/freelance/lineleap/loading.png",
-            "/freelance/lineleap/confirmed.png",
-            "/freelance/lineleap/denied.png",
+        media = listOf(
+            Media.Image("/freelance/lineleap/loading.png"),
+            Media.Image("/freelance/lineleap/confirmed.png"),
+            Media.Image("/freelance/lineleap/denied.png"),
         ),
     ),
     Experience(
@@ -193,10 +211,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/project/task_tracker/icon.png",
-        imageUris = listOf(
-            "/project/task_tracker/classes.png",
-            "/project/task_tracker/class.png",
-            "/project/task_tracker/assignments.png",
+        media = listOf(
+            Media.Image("/project/task_tracker/classes.png"),
+            Media.Image("/project/task_tracker/class.png"),
+            Media.Image("/project/task_tracker/assignments.png"),
         ),
     ),
     Experience(
@@ -219,10 +237,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/project/totem/icon.png",
-        imageUris = listOf(
-            "/project/totem/private_feed.png",
-            "/project/totem/public_feed.png",
-            "/project/totem/refactor.png",
+        media = listOf(
+            Media.Image("/project/totem/private_feed.png"),
+            Media.Image("/project/totem/public_feed.png"),
+            Media.Image("/project/totem/refactor.png"),
         ),
     ),
     Experience(
@@ -243,10 +261,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/project/present/icon.png",
-        imageUris = listOf(
-            "/project/present/user_test.png",
-            "/project/present/pitch.jpg",
-            "/project/present/presentation.jpg",
+        media = listOf(
+            Media.Image("/project/present/user_test.png"),
+            Media.Image("/project/present/pitch.jpg"),
+            Media.Image("/project/present/presentation.jpg"),
         ),
     ),
     Experience(
@@ -269,10 +287,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/project/artabletop/icon.png",
-        imageUris = listOf(
-            "/project/artabletop/move_range.jpg",
-            "/project/artabletop/tabletop.jpg",
-            "/project/artabletop/up_close.jpg",
+        media = listOf(
+            Media.Image("/project/artabletop/move_range.jpg"),
+            Media.Image("/project/artabletop/tabletop.jpg"),
+            Media.Image("/project/artabletop/up_close.jpg"),
         ),
     ),
     Experience(
@@ -294,10 +312,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/project/mframe/icon.png",
-        imageUris = listOf(
-            "/project/mframe/vaporwave.png",
-            "/project/mframe/vr.png",
-            "/project/mframe/web.png",
+        media = listOf(
+            Media.Image("/project/mframe/vaporwave.png"),
+            Media.Image("/project/mframe/vr.png"),
+            Media.Image("/project/mframe/web.png"),
         ),
     ),
     Experience(
@@ -320,10 +338,10 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
             Topic.UX,
         ),
         iconUri = "/experiences/project/gbhs/icon.png",
-        imageUris = listOf(
-            "/project/gbhs/drawer.png",
-            "/project/gbhs/schedule.png",
-            "/project/gbhs/calendar.png",
+        media = listOf(
+            Media.Image("/project/gbhs/drawer.png"),
+            Media.Image("/project/gbhs/schedule.png"),
+            Media.Image("/project/gbhs/calendar.png"),
         ),
     ),
 )
