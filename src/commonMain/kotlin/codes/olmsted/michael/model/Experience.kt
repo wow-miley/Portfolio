@@ -23,6 +23,64 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         id = 123,
         startYear = 2019,
         endYear = null,
+        name = "Walmart (via Launch Consulting Group)",
+        title = "Senior Mobile Solutions Engineer",
+        route = "/walmart",
+        summary = "- Member of Android Platform team, designing Gradle build tools to increase developer productivity - Member of Walmart+ Member Care team, building features .",
+        category = Category.JOB,
+        skills = setOf(
+            Skill.ANDROID,
+            Skill.KOTLIN,
+            Skill.GRAPHQL,
+        ),
+        topics = setOf(
+            Topic.E_COMMERCE,
+            Topic.UI,
+        ),
+        iconUri = "/experiences/job/stockx/icon.jpeg",
+        media = listOf(
+            Media.Gif(
+                uri = "/job/stockx/load_regions_thumb.png",
+                gifUri = "/job/stockx/load_regions.gif",
+            ),
+            Media.Gif(
+                uri = "/job/stockx/sales_graph_thumb.png",
+                gifUri = "/job/stockx/sales_graph.gif",
+            ),
+            Media.Gif(
+                uri = "/job/stockx/product_transition_thumb.png",
+                gifUri = "/job/stockx/product_transition.gif",
+            ),
+        ),
+    ),
+    Experience(
+        id = 12345,
+        startYear = 2021,
+        endYear = 2022,
+        name = "Socket",
+        title = "Kotlin Multiplatform",
+        route = "/socket",
+        summary = "Built a native Android app using Jetpack Compose, Coroutines, Flow, Hilt, Room, and GraphQL. Delivered a minimum viable direct-to-consumer product for the world's leading ed-tech company.",
+        category = Category.FREELANCE,
+        skills = setOf(
+            Skill.ANDROID,
+            Skill.KOTLIN,
+            Skill.JAVA,
+            Skill.GRAPHQL,
+        ),
+        topics = setOf(
+            Topic.UI,
+            Topic.UX,
+        ),
+        iconUri = "/experiences/freelance/ateam/icon.svg",
+        media = listOf(
+            Media.Image("/freelance/ateam/nda.png"),
+        ),
+    ),
+    Experience(
+        id = 123,
+        startYear = 2019,
+        endYear = 2022,
         name = "StockX",
         title = "Android Software Engineer II",
         route = "/stockx",
@@ -58,7 +116,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         id = 12345,
         startYear = 2021,
         endYear = 2022,
-        name = "a.team - McGraw Hill",
+        name = "Sharpen - McGraw Hill (via A.Team)",
         title = "Android Developer",
         route = "/a_team/mcgraw_hill",
         summary = "Built a native Android app using Jetpack Compose, Coroutines, Flow, Hilt, Room, and GraphQL. Delivered a minimum viable direct-to-consumer product for the world's leading ed-tech company.",
@@ -72,6 +130,7 @@ val STUB_EXPERIENCES: List<Experience> = listOf(
         topics = setOf(
             Topic.UI,
             Topic.UX,
+            Topic.ED_TECH,
         ),
         iconUri = "/experiences/freelance/ateam/icon.svg",
         media = listOf(
