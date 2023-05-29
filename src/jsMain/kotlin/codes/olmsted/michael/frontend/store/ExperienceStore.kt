@@ -5,7 +5,7 @@ import codes.olmsted.michael.model.FilterConfig
 import codes.olmsted.michael.model.Experience
 import codes.olmsted.michael.model.STUB_EXPERIENCES
 import codes.olmsted.michael.model.Skill
-import dev.fritz2.binding.RootStore
+import dev.fritz2.core.RootStore
 
 object ExperienceStore : RootStore<ExperienceStore.State>(State(), id = "categories") {
 

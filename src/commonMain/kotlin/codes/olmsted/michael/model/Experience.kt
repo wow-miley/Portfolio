@@ -1,6 +1,6 @@
 package codes.olmsted.michael.model
 
-import dev.fritz2.lenses.Lenses
+import dev.fritz2.core.Lenses
 
 @Lenses
 data class Experience(
@@ -16,7 +16,9 @@ data class Experience(
     val topics: Set<Topic>,
     val iconUri: String,
     val media: List<Media>,
-)
+) {
+    companion object
+}
 
 val STUB_EXPERIENCES: List<Experience> = listOf(
     Experience(

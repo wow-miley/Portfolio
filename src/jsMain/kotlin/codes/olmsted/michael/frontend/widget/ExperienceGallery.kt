@@ -1,7 +1,9 @@
 package codes.olmsted.michael.frontend.widget
 
 import codes.olmsted.michael.model.Media
-import dev.fritz2.dom.html.RenderContext
+import dev.fritz2.core.RenderContext
+import dev.fritz2.core.href
+import dev.fritz2.core.src
 
 fun RenderContext.experienceGallery(
     media: List<Media>,

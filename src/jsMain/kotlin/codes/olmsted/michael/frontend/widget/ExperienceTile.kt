@@ -1,7 +1,8 @@
 package codes.olmsted.michael.frontend.widget
 
 import codes.olmsted.michael.model.Experience
-import dev.fritz2.dom.html.RenderContext
+import dev.fritz2.core.RenderContext
+import dev.fritz2.core.src
 
 private val Experience.dateRange: String
 get() = when {

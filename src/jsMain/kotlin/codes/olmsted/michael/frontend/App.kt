@@ -3,10 +3,10 @@ package codes.olmsted.michael.frontend
 import codes.olmsted.michael.frontend.store.ExperienceStore
 import codes.olmsted.michael.frontend.widget.experienceList
 import codes.olmsted.michael.model.Category
-import dev.fritz2.dom.html.RenderContext
-import dev.fritz2.dom.html.render
+import dev.fritz2.core.RenderContext
+import dev.fritz2.core.render
 import dev.fritz2.routing.Router
-import dev.fritz2.routing.router
+import dev.fritz2.routing.routerOf
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 
@@ -52,7 +52,7 @@ fun RenderContext.header(
 
 @ExperimentalCoroutinesApi
 fun main() {
-    val router = router(mapOf("category" to "all"))
+    val router = routerOf(mapOf("category" to "all"))
 
     render("#target") {
         router
