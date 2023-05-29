@@ -22,12 +22,12 @@ data class Experience(
 
 val WALMART = Experience(
     id = 123,
-    startYear = 2019,
+    startYear = 2022,
     endYear = null,
     name = "Walmart",
     title = "Senior Mobile Solutions Engineer",
     route = "/walmart",
-    summary = "- Member of Android Platform team, designing Gradle build tools to increase developer productivity - Member of Walmart+ Member Care team, building features .",
+    summary = "Member of the Android Platform team; designing Gradle build tools to increase developer productivity and ensure tech debt is properly managed. Member of Walmart+ Member Care team; building features to enhance the account management experience.",
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -38,19 +38,16 @@ val WALMART = Experience(
         Topic.E_COMMERCE,
         Topic.UI,
     ),
-    iconUri = "/experiences/job/stockx/icon.jpeg",
+    iconUri = "/experiences/job/walmart/icon.png",
     media = listOf(
-        Media.Gif(
-            uri = "/job/stockx/load_regions_thumb.png",
-            gifUri = "/job/stockx/load_regions.gif",
+        Media.Image(
+            uri = "/job/walmart/home.png",
         ),
-        Media.Gif(
-            uri = "/job/stockx/sales_graph_thumb.png",
-            gifUri = "/job/stockx/sales_graph.gif",
+        Media.Image(
+            uri = "/job/walmart/account.png",
         ),
-        Media.Gif(
-            uri = "/job/stockx/product_transition_thumb.png",
-            gifUri = "/job/stockx/product_transition.gif",
+        Media.Image(
+            uri = "/job/walmart/w_plus.png",
         ),
     ),
 )
@@ -62,21 +59,29 @@ val SOCKET = Experience(
     name = "Socket",
     title = "Kotlin Multiplatform",
     route = "/socket",
-    summary = "Built a native Android app using Jetpack Compose, Coroutines, Flow, Hilt, Room, and GraphQL. Delivered a minimum viable direct-to-consumer product for the world's leading ed-tech company.",
+    summary = "Building a cross-platform automation platform to allow for extensible control of any device. Creating native Android, iOS, Web, and Desktop clients while leveraging Kotlin Multiplatform, Compose, and SwiftUI for true \"write once, run everywhere\" feature development.",
     category = Category.PROJECT,
     skills = setOf(
-        Skill.ANDROID,
-        Skill.KOTLIN,
-        Skill.JAVA,
+        Skill.COMPOSE,
+        Skill.KOTLIN_MULTIPLATFORM,
         Skill.GRAPHQL,
+        Skill.SWIFT_UI,
     ),
     topics = setOf(
         Topic.UI,
         Topic.UX,
     ),
-    iconUri = "/experiences/freelance/ateam/icon.svg",
+    iconUri = "/experiences/project/socket/icon.png",
     media = listOf(
-        Media.Image("/freelance/ateam/nda.png"),
+        Media.Image(
+            uri = "/project/socket/notification.png",
+        ),
+        Media.Image(
+            uri = "/project/socket/table_form.png",
+        ),
+        Media.Image(
+            uri = "/project/socket/table_render.png",
+        ),
     ),
 )
 
@@ -87,10 +92,11 @@ val STOCK_X = Experience(
     name = "StockX",
     title = "Android Software Engineer II",
     route = "/stockx",
-    summary = "Developing a native Android application in Kotlin using Jetpack Compose, MVVM, Coroutines, Flow, and Clean Architecture. Working in a legacy Java codebase and introducing new features in Kotlin. Involved in checkout, payment, and internationalization feature work.",
+    summary = "Worked in a legacy Java codebase to migrate features into Kotlin using Clean Architecture. Involved in checkout, payment, and internationalization feature work. Responsible for the initial adoption of Jetpack Compose while performing a complete rewrite of the checkout flow.",
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
+        Skill.COMPOSE,
         Skill.KOTLIN,
         Skill.JAVA,
         Skill.GRAPHQL,
@@ -123,12 +129,12 @@ val SHARPEN = Experience(
     name = "Sharpen",
     title = "Android Developer",
     route = "/sharpen",
-    summary = "Built a native Android app using Jetpack Compose, Coroutines, Flow, Hilt, Room, and GraphQL. Delivered a minimum viable direct-to-consumer product for the world's leading ed-tech company.",
+    summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. Delivered a minimum viable direct-to-consumer product for the McGraw Hill -- the world's leading ed-tech company.",
     category = Category.FREELANCE,
     skills = setOf(
         Skill.ANDROID,
+        Skill.COMPOSE,
         Skill.KOTLIN,
-        Skill.JAVA,
         Skill.GRAPHQL,
     ),
     topics = setOf(
@@ -136,9 +142,19 @@ val SHARPEN = Experience(
         Topic.UX,
         Topic.ED_TECH,
     ),
-    iconUri = "/experiences/freelance/ateam/icon.svg",
+    iconUri = "/experiences/freelance/sharpen/icon.png",
     media = listOf(
-        Media.Image("/freelance/ateam/nda.png"),
+        Media.Gif(
+            uri = "/freelance/sharpen/swiping_thumb.jpg",
+            gifUri = "/freelance/sharpen/swiping.gif",
+        ),
+        Media.Gif(
+            uri = "/freelance/sharpen/quiz_thumb.jpg",
+            gifUri = "/freelance/sharpen/quiz.gif",
+        ),
+        Media.Image(
+            uri = "/freelance/sharpen/track.png",
+        ),
     ),
 )
 
@@ -186,7 +202,7 @@ val HANDOTATE = Experience(
     name = "handotate",
     title = "Native Android & Design",
     route = "/handotate",
-    summary = "Used mvRx library from AirBnb to facilitate rapid iteration, created custom UI for annotating ML training datasets.",
+    summary = "Used the mvRx library from AirBnb to facilitate rapid iteration of a prototype used for annotating ML training datasets. Included the ability to keyframe multiple bounding boxes on videos, and then interpolate for labelling a moving object.",
     category = Category.PROJECT,
     skills = setOf(
         Skill.ANDROID,
@@ -200,8 +216,11 @@ val HANDOTATE = Experience(
     ),
     iconUri = "/experiences/project/handotate/icon.png",
     media = listOf(
+        Media.Gif(
+            uri = "/project/handotate/handotate_thumb.jpg",
+            gifUri = "/project/handotate/handotate.gif",
+        ),
         Media.Image("/project/handotate/home.png"),
-        Media.Image("/project/handotate/find.png"),
         Media.Image("/project/handotate/account.png"),
     ),
 )
@@ -421,8 +440,8 @@ val GBHS = Experience(
 val ALL_EXPERIENCES = listOf(
     WALMART,
     SOCKET,
-    STOCK_X,
     SHARPEN,
+    STOCK_X,
     TROVE,
     HANDOTATE,
     MEET_UP,

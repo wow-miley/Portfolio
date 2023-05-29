@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.map
 
 fun RenderContext.experienceList() {
     div("experience-section") {
-        h1 { +"All Experience" }
+        h1 { +"All Experiences" }
         ExperienceStore.data
             .map { state ->
                 state.experiences.filterBy(state.filterConfig)
