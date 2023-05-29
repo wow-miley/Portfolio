@@ -7,15 +7,18 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 
 fun RenderContext.experienceList() {
-    div("experience-list Grid Grid--full small-Grid--full large-Grid--1of2") {
+    div("experience-section") {
+        h1 { +"All Experience" }
         ExperienceStore.data
-            .map {  state ->
+            .map { state ->
                 state.experiences.filterBy(state.filterConfig)
             }
             .distinctUntilChanged()
             .render { experiences ->
-                experiences.forEach { experience ->
-                    experienceTile(experience)
+                div("experience-list Grid Grid--gutters large-Grid--1of4 medium-Grid--1of3 small-Grid--full") {
+                    experiences.forEach { experience ->
+                        experienceCell(experience)
+                    }
                 }
             }
     }

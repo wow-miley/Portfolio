@@ -34,12 +34,12 @@
 }
 
 .thumbnail img {
-    width: 24vw;
-    min-width: 120px;
-    max-width: 240px;
-    height: 48vw;
-    min-height: 240px;
-    max-height: 480px;
+    width: 240px;
+    /*min-width: 120px;*/
+    /*max-width: 240px;*/
+    height: 360px;
+    /*min-height: 240px;*/
+    /*max-height: 480px;*/
     border-radius: 12px;
     object-fit: cover;
     object-position: 0 0;

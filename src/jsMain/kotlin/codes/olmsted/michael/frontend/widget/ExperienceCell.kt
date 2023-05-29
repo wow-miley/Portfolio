@@ -5,23 +5,23 @@ import dev.fritz2.core.RenderContext
 import dev.fritz2.core.src
 
 private val Experience.dateRange: String
-get() = when {
-    endYear == null -> "$startYear - Now"
-    startYear == endYear -> "$startYear"
-    else -> "$startYear - $endYear"
-}
+    get() = when {
+        endYear == null -> "$startYear - Now"
+        startYear == endYear -> "$startYear"
+        else -> "$startYear - $endYear"
+    }
 
 private val Experience.isActive: String
-get() = when (endYear) {
-    null -> "active"
-    else -> ""
-}
+    get() = when (endYear) {
+        null -> "active"
+        else -> ""
+    }
 
-fun RenderContext.experienceTile(
+fun RenderContext.experienceCell(
     experience: Experience,
 ) {
     with(experience) {
-        div("experience-tile Grid-cell") {
+        div("experience-cell Grid-cell") {
             div("experience-content") {
                 div("experience-header row") {
                     img("experience-icon") {
@@ -48,10 +48,10 @@ fun RenderContext.experienceTile(
                     }
                 }
 
-                div("experience-gallery") {
-                    experienceGallery(media)
-                }
-
+                // div("experience-gallery") {
+                //     experienceGallery(media)
+                // }
+                //
                 p("experience-info") { +summary }
             }
         }

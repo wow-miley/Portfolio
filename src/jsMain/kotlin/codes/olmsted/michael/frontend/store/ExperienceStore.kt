@@ -1,9 +1,9 @@
 package codes.olmsted.michael.frontend.store
 
+import codes.olmsted.michael.model.ALL_EXPERIENCES
 import codes.olmsted.michael.model.Category
 import codes.olmsted.michael.model.FilterConfig
 import codes.olmsted.michael.model.Experience
-import codes.olmsted.michael.model.STUB_EXPERIENCES
 import codes.olmsted.michael.model.Skill
 import dev.fritz2.core.RootStore
 
@@ -11,7 +11,7 @@ object ExperienceStore : RootStore<ExperienceStore.State>(State(), id = "categor
 
     data class State(
         val categories: List<Category> = Category.values().toList(),
-        val experiences: List<Experience> = STUB_EXPERIENCES,
+        val experiences: List<Experience> = ALL_EXPERIENCES,
         val filterConfig: FilterConfig? = null,
     )
 

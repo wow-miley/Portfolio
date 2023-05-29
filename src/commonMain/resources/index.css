@@ -142,27 +142,21 @@ button {
     border-color: rgba(175, 47, 47, 0.2);
 }
 
-.experience-list {
-    padding-top: 136px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.experience-tile {
+.experience-section {
+    padding-top: 132px;
     display: inline-flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    background: white;
-    width: max-content;
-    max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1),
-    0 25px 50px 0 rgba(0, 0, 0, 0.05);
 }
 
-.experience-tile * {
+.experience-list {
+    padding-top: 24px;
     display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.experience-cell {
+    display: inline-flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -170,8 +164,13 @@ button {
     display: inline-flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-width: 100%;
+    flex: 1;
     padding: 24px 0 32px 0;
+    margin: .5em 0 0 .5em;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1),
+    0 25px 50px 0 rgba(0, 0, 0, 0.05);
 }
 
 .experience-icon {
@@ -240,7 +239,7 @@ button {
 
 .date-range {
     border-radius: 32px;
-    padding: 4px 12px;
+    padding: 2px 12px;
     color: #FFFFFF;
     background: #999999;
     white-space: nowrap;
@@ -285,7 +284,9 @@ button {
 }
 
 .content {
-    padding: 0 4vw;
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
@@ -336,11 +337,11 @@ button {
 
 /* With gutters */
 .Grid--gutters {
-    margin: -1em 0 0 -1em;
+    margin: -.5em 0 0 -.5em;
 }
-.Grid--gutters > .Grid-cell {
-    padding: 1em 0 0 1em;
-}
+/*.Grid--gutters > .Grid-cell {*/
+/*    padding: .5em 0 0 .5em;*/
+/*}*/
 
 /* Alignment per row */
 .Grid--top {
@@ -381,8 +382,8 @@ button {
     flex: 0 0 25%
 }
 
-/* Small to medium screens */
-@media (min-width: 24em) {
+/* Small screens */
+@media (min-width: 0em) {
     .small-Grid--fit > .Grid-cell {
         flex: 1;
     }
@@ -400,8 +401,27 @@ button {
     }
 }
 
+/* Medium screens */
+@media (min-width: 64em) {
+    .medium-Grid--fit > .Grid-cell {
+        flex: 1;
+    }
+    .medium-Grid--full > .Grid-cell {
+        flex: 0 0 100%;
+    }
+    .medium-Grid--1of2 > .Grid-cell {
+        flex: 0 0 50%
+    }
+    .medium-Grid--1of3 > .Grid-cell {
+        flex: 0 0 33.3333%
+    }
+    .medium-Grid--1of4 > .Grid-cell {
+        flex: 0 0 25%
+    }
+}
+
 /* Large screens */
-@media (min-width: 48em) {
+@media (min-width: 80em) {
     .large-Grid--fit > .Grid-cell {
         flex: 1;
     }

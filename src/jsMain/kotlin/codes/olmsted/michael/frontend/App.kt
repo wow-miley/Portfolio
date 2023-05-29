@@ -2,6 +2,7 @@ package codes.olmsted.michael.frontend
 
 import codes.olmsted.michael.frontend.store.ExperienceStore
 import codes.olmsted.michael.frontend.widget.experienceList
+import codes.olmsted.michael.frontend.widget.featuredExperiences
 import codes.olmsted.michael.model.Category
 import dev.fritz2.core.RenderContext
 import dev.fritz2.core.render
@@ -68,6 +69,7 @@ fun main() {
 
         div("content") {
             header(router)
+            featuredExperiences()
             experienceList()
         }
     }
