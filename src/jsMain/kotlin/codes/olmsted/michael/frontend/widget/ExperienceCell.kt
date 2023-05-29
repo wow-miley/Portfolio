@@ -48,10 +48,10 @@ fun RenderContext.experienceCell(
                     }
                 }
 
-                // div("experience-gallery") {
-                //     experienceGallery(media)
-                // }
-                //
+                div("experience-gallery") {
+                    experienceGallery(media)
+                }
+
                 p("experience-info") { +summary }
             }
         }

@@ -19,7 +19,7 @@ fun RenderContext.experienceGallery(
                 }
 
                 if (item is Media.Gif) {
-                    h3("tag") { +"GIF" }
+                    h6("tag") { +"GIF" }
                 }
             }
 
