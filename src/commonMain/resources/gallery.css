@@ -79,8 +79,8 @@
 }
 
 .lightbox img {
-    /*max-width: 90%;*/
-    /*max-height: 80%;*/
+    max-width: 90%;
+    max-height: 80%;
     transition: all 1s ease;
     object-fit: contain;
     -moz-transition: all 1s ease;
