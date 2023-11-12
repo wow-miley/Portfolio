@@ -210,9 +210,14 @@ button {
 .experience-header.title-row {
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-top: 2px;
+}
+
+.experience-header.title {
+    margin: 0 auto 0 0;
+    align-self: flex-start;
 }
 
 .experience-gallery {
@@ -240,6 +245,7 @@ button {
 .date-range {
     border-radius: 32px;
     padding: 2px 12px;
+    margin: 0 2px;
     color: #FFFFFF;
     background: #999999;
     white-space: nowrap;

@@ -5,8 +5,7 @@ import dev.fritz2.core.Lenses
 @Lenses
 data class Experience(
     val id: Long,
-    val startYear: Int,
-    val endYear: Int?,
+    val timespans: List<Pair<Int, Int?>>,
     val name: String,
     val title: String,
     val route: String,
@@ -22,8 +21,7 @@ data class Experience(
 
 val WALMART = Experience(
     id = 123,
-    startYear = 2022,
-    endYear = null,
+    timespans = listOf(2022 to null),
     name = "Walmart",
     title = "Senior Mobile Solutions Engineer",
     route = "/walmart",
@@ -54,8 +52,7 @@ val WALMART = Experience(
 
 val SOCKET = Experience(
     id = 12345,
-    startYear = 2021,
-    endYear = null,
+    timespans = listOf(2021 to null),
     name = "Socket",
     title = "Kotlin Multiplatform",
     route = "/socket",
@@ -87,8 +84,7 @@ val SOCKET = Experience(
 
 val STOCK_X = Experience(
     id = 123,
-    startYear = 2019,
-    endYear = 2022,
+    timespans = listOf(2019 to 2022),
     name = "StockX",
     title = "Android Software Engineer II",
     route = "/stockx",
@@ -124,12 +120,11 @@ val STOCK_X = Experience(
 
 val SHARPEN = Experience(
     id = 12345,
-    startYear = 2021,
-    endYear = 2022,
+    timespans = listOf(2021 to 2022, 2023 to 2023),
     name = "Sharpen",
     title = "Android Developer",
     route = "/sharpen",
-    summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. Delivered a minimum viable direct-to-consumer product for the McGraw Hill -- the world's leading ed-tech company.",
+    summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. Delivered a minimum viable direct-to-consumer product for the McGraw Hill -- the world's leading ed-tech company. Rejoined the ",
     category = Category.FREELANCE,
     skills = setOf(
         Skill.ANDROID,
@@ -160,8 +155,7 @@ val SHARPEN = Experience(
 
 val TROVE = Experience(
     id = 1234,
-    startYear = 2018,
-    endYear = 2019,
+    timespans = listOf(2018 to 2019),
     name = "Trove",
     title = "Android Engineering Intern",
     route = "/trove",
@@ -197,8 +191,7 @@ val TROVE = Experience(
 
 val HANDOTATE = Experience(
     id = 12345,
-    startYear = 2019,
-    endYear = 2019,
+    timespans = listOf(2019 to 2019),
     name = "handotate",
     title = "Native Android & Design",
     route = "/handotate",
@@ -227,8 +220,7 @@ val HANDOTATE = Experience(
 
 val MEET_UP = Experience(
     id = 12345,
-    startYear = 2019,
-    endYear = 2019,
+    timespans = listOf(2019 to 2019),
     name = "Meet^",
     title = "React Native & Design",
     route = "/meet_up",
@@ -255,8 +247,7 @@ val MEET_UP = Experience(
 
 val LINELEAP = Experience(
     id = 77,
-    startYear = 2018,
-    endYear = 2018,
+    timespans = listOf(2018 to 2018),
     name = "LineLeap",
     title = "React Web & Design",
     route = "/lineleap",
@@ -281,8 +272,7 @@ val LINELEAP = Experience(
 
 val TASKTRACKER = Experience(
     id = 12345,
-    startYear = 2018,
-    endYear = 2018,
+    timespans = listOf(2018 to 2018),
     name = "TaskTracker",
     title = "React Web & Design",
     route = "/task_tracker",
@@ -307,8 +297,7 @@ val TASKTRACKER = Experience(
 
 val TOTEM = Experience(
     id = 12345,
-    startYear = 2017,
-    endYear = 2018,
+    timespans = listOf(2017 to 2018),
     name = "Totem",
     title = "Native Android & Design",
     route = "/totem",
@@ -334,8 +323,7 @@ val TOTEM = Experience(
 
 val PRESENT = Experience(
     id = 12345,
-    startYear = 2017,
-    endYear = 2017,
+    timespans = listOf(2017 to 2017),
     name = "Present VR",
     title = "Unity & node.js",
     route = "/present",
@@ -359,8 +347,7 @@ val PRESENT = Experience(
 
 val ARTABLETOP = Experience(
     id = 12345,
-    startYear = 2017,
-    endYear = 2017,
+    timespans = listOf(2017 to 2017),
     name = "ARTabletop",
     title = "Unity & Android ARCore",
     route = "/artabletop",
@@ -386,8 +373,7 @@ val ARTABLETOP = Experience(
 
 val MFRAME = Experience(
     id = 12345,
-    startYear = 2016,
-    endYear = 2017,
+    timespans = listOf(2016 to 2017),
     name = "mFrame",
     title = "A-Frame WebVR",
     route = "/mframe",
@@ -412,8 +398,7 @@ val MFRAME = Experience(
 
 val GBHS = Experience(
     id = 12345,
-    startYear = 2015,
-    endYear = 2016,
+    timespans = listOf(2015 to 2016),
     name = "GBHS",
     title = "Native Android & iOS",
     route = "/gbhs",
