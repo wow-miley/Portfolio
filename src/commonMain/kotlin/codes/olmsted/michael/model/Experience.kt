@@ -124,12 +124,13 @@ val SHARPEN = Experience(
     name = "Sharpen",
     title = "Android Developer",
     route = "/sharpen",
-    summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. Delivered a minimum viable direct-to-consumer product for the McGraw Hill -- the world's leading ed-tech company. Rejoined the ",
+    summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. Delivered a minimum viable direct-to-consumer product for the McGraw Hill -- the world's leading ed-tech company. Rejoined the project in 2023 to work on a cross-platform analytics library implementation for launching v2.",
     category = Category.FREELANCE,
     skills = setOf(
         Skill.ANDROID,
         Skill.COMPOSE,
         Skill.KOTLIN,
+        Skill.KOTLIN_MULTIPLATFORM,
         Skill.GRAPHQL,
     ),
     topics = setOf(
