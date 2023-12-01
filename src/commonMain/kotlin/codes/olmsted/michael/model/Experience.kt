@@ -25,7 +25,9 @@ val WALMART = Experience(
     name = "Walmart",
     title = "Senior Mobile Solutions Engineer",
     route = "/walmart",
-    summary = "Member of the Android Platform team; designing Gradle build tools to increase developer productivity and ensure tech debt is properly managed. Member of Walmart+ Member Care team; building features to enhance the account management experience.",
+    summary = "Member of the Android Platform team; designing Gradle build tools to increase developer productivity and ensure tech debt is properly managed. " +
+        "Member of the W+ Engagement and Retention team; building features to improve communication of membership benefits. " +
+        "Member of W+ Account Management team; building features to enhance the account management experience.",
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -56,7 +58,8 @@ val SOCKET = Experience(
     name = "Socket",
     title = "Kotlin Multiplatform",
     route = "/socket",
-    summary = "Building a cross-platform automation platform to allow for extensible control of any device. Creating native Android, iOS, Web, and Desktop clients while leveraging Kotlin Multiplatform, Compose, and SwiftUI for true \"write once, run everywhere\" feature development.",
+    summary = "Building a cross-platform automation platform to allow for extensible control of any device. " +
+        "Creating native Android, iOS, Web, and Desktop clients while leveraging Kotlin Multiplatform, Compose, and SwiftUI for true \"write once, run everywhere\" feature development.",
     category = Category.PROJECT,
     skills = setOf(
         Skill.COMPOSE,
@@ -88,7 +91,8 @@ val STOCK_X = Experience(
     name = "StockX",
     title = "Android Software Engineer II",
     route = "/stockx",
-    summary = "Worked in a legacy Java codebase to migrate features into Kotlin using Clean Architecture. Involved in checkout, payment, and internationalization feature work. Responsible for the initial adoption of Jetpack Compose while performing a complete rewrite of the checkout flow.",
+    summary = "Worked in a legacy Java codebase to migrate features into Kotlin using Clean Architecture. " +
+        "Involved in checkout, payment, and internationalization feature work. Responsible for the initial adoption of Jetpack Compose while performing a complete rewrite of the checkout flow.",
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -120,11 +124,13 @@ val STOCK_X = Experience(
 
 val SHARPEN = Experience(
     id = 12345,
-    timespans = listOf(2021 to 2022, 2023 to 2023),
+    timespans = listOf(2021 to 2023),
     name = "Sharpen",
     title = "Android Developer",
     route = "/sharpen",
-    summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. Delivered a minimum viable direct-to-consumer product for the McGraw Hill -- the world's leading ed-tech company. Rejoined the project in 2023 to work on a cross-platform analytics library implementation for launching v2.",
+    summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. " +
+        "Delivered a minimum viable direct-to-consumer product for the McGraw Hill -- the world's leading ed-tech company. " +
+        "Rejoined the project in 2023 to work on a cross-platform analytics library implementation for launching v2.",
     category = Category.FREELANCE,
     skills = setOf(
         Skill.ANDROID,
@@ -160,7 +166,8 @@ val TROVE = Experience(
     name = "Trove",
     title = "Android Engineering Intern",
     route = "/trove",
-    summary = "Developed a native Android application in Kotlin using RxJava with a Redux architecture. Focused on UI/UX implementation of features including reusable components, animations, and development of a platform style guide.",
+    summary = "Developed a native Android application in Kotlin using RxJava with a Redux architecture. " +
+        "Focused on UI/UX implementation of features including reusable components, animations, and development of a platform style guide.",
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -196,7 +203,8 @@ val HANDOTATE = Experience(
     name = "handotate",
     title = "Native Android & Design",
     route = "/handotate",
-    summary = "Used the mvRx library from AirBnb to facilitate rapid iteration of a prototype used for annotating ML training datasets. Included the ability to keyframe multiple bounding boxes on videos, and then interpolate for labelling a moving object.",
+    summary = "Used the mvRx library from AirBnb to facilitate rapid iteration of a prototype used for annotating ML training datasets. " +
+        "Included the ability to keyframe multiple bounding boxes on videos, and then interpolate for labelling a moving object.",
     category = Category.PROJECT,
     skills = setOf(
         Skill.ANDROID,
@@ -277,7 +285,8 @@ val TASKTRACKER = Experience(
     name = "TaskTracker",
     title = "React Web & Design",
     route = "/task_tracker",
-    summary = "Focused on the product design of a Kanban style homework tracking web app. Built out the proper infrastructure to allow for user testing to validate MVP.",
+    summary = "Focused on the product design of a Kanban style homework tracking web app. " +
+        "Built out the proper infrastructure to allow for user testing to validate MVP.",
     category = Category.PROJECT,
     skills = setOf(
         Skill.REACT,
@@ -302,7 +311,8 @@ val TOTEM = Experience(
     name = "Totem",
     title = "Native Android & Design",
     route = "/totem",
-    summary = "Developed a native Android application in Kotlin using RxJava and Dagger. Also responsible for the UI design, API design, and overall technology management of the company.",
+    summary = "Developed a native Android application in Kotlin using RxJava and Dagger. " +
+        "Also responsible for the UI design, API design, and overall technology management of the company.",
     category = Category.PROJECT,
     skills = setOf(
         Skill.ANDROID,
@@ -441,7 +451,7 @@ val ALL_EXPERIENCES = listOf(
 )
 
 val FEATURED_EXPERIENCES = listOf(
+    SOCKET,
     WALMART,
-    STOCK_X,
     SHARPEN,
 )
