@@ -1,4 +1,4 @@
-package codes.olmsted.michael.model
+package codes.miley.model
 
 import dev.fritz2.core.Lenses
 

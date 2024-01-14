@@ -1,9 +1,9 @@
-package codes.olmsted.michael.frontend
+package codes.miley.frontend
 
-import codes.olmsted.michael.frontend.store.ExperienceStore
-import codes.olmsted.michael.frontend.widget.experienceList
-import codes.olmsted.michael.frontend.widget.featuredExperiences
-import codes.olmsted.michael.model.Category
+import codes.miley.frontend.store.ExperienceStore
+import codes.miley.frontend.widget.experienceList
+import codes.miley.frontend.widget.featuredExperiences
+import codes.miley.model.Category
 import dev.fritz2.core.RenderContext
 import dev.fritz2.core.render
 import dev.fritz2.routing.Router
@@ -15,7 +15,7 @@ fun RenderContext.header(
     router: Router<Map<String, String>>,
 ) {
     div("categories") {
-        h2 { +"Michael Olmsted" }
+        h2 { +"Miley Chandonnet" }
         h4 { +"Native Android Application Engineer" }
 
         // TODO: Add filtering

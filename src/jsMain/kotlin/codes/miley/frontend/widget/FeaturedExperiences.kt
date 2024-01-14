@@ -1,6 +1,6 @@
-package codes.olmsted.michael.frontend.widget
+package codes.miley.frontend.widget
 
-import codes.olmsted.michael.model.FEATURED_EXPERIENCES
+import codes.miley.model.FEATURED_EXPERIENCES
 import dev.fritz2.core.RenderContext
 
 fun RenderContext.featuredExperiences() {

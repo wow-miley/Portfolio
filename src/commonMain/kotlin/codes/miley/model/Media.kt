@@ -1,4 +1,4 @@
-package codes.olmsted.michael.model
+package codes.miley.model
 
 sealed class Media(
     open val uri: String,

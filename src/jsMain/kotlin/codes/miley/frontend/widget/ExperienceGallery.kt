@@ -1,6 +1,6 @@
-package codes.olmsted.michael.frontend.widget
+package codes.miley.frontend.widget
 
-import codes.olmsted.michael.model.Media
+import codes.miley.model.Media
 import dev.fritz2.core.RenderContext
 import dev.fritz2.core.href
 import dev.fritz2.core.src

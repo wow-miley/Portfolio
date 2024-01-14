@@ -1,7 +1,7 @@
-package codes.olmsted.michael.frontend.widget
+package codes.miley.frontend.widget
 
-import codes.olmsted.michael.frontend.store.ExperienceStore
-import codes.olmsted.michael.model.filterBy
+import codes.miley.frontend.store.ExperienceStore
+import codes.miley.model.filterBy
 import dev.fritz2.core.RenderContext
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map

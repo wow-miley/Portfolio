@@ -1,6 +1,6 @@
-package codes.olmsted.michael.frontend.widget
+package codes.miley.frontend.widget
 
-import codes.olmsted.michael.model.Experience
+import codes.miley.model.Experience
 import dev.fritz2.core.RenderContext
 import dev.fritz2.core.src
 

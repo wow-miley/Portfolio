@@ -1,10 +1,10 @@
-package codes.olmsted.michael.frontend.store
+package codes.miley.frontend.store
 
-import codes.olmsted.michael.model.ALL_EXPERIENCES
-import codes.olmsted.michael.model.Category
-import codes.olmsted.michael.model.FilterConfig
-import codes.olmsted.michael.model.Experience
-import codes.olmsted.michael.model.Skill
+import codes.miley.model.ALL_EXPERIENCES
+import codes.miley.model.Category
+import codes.miley.model.FilterConfig
+import codes.miley.model.Experience
+import codes.miley.model.Skill
 import dev.fritz2.core.RootStore
 
 object ExperienceStore : RootStore<ExperienceStore.State>(State(), id = "categories") {

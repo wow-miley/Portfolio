@@ -1,4 +1,4 @@
-package codes.olmsted.michael.model
+package codes.miley.model
 
 enum class Skill(val displayName: String) {
     ANDROID("Android"),
