@@ -19,15 +19,48 @@ data class Experience(
     companion object
 }
 
+val GRINDR = Experience(
+    id = 123,
+    timespans = listOf(2023 to null),
+    name = "Grindr",
+    title = "Android Developer",
+    route = "/grindr",
+    summary = "Enhancing customer satisfaction and retention by boosting engagement through IAP-based user experiences. " +
+        "Focusing on map driven user interactions, which includes using Google Maps APIs for location tagging and custom overlay drawing.",
+    category = Category.FREELANCE,
+    skills = setOf(
+        Skill.ANDROID,
+        Skill.COMPOSE,
+        Skill.KOTLIN,
+        Skill.SQL
+    ),
+    topics = setOf(
+        Topic.DATING,
+        Topic.UI,
+    ),
+    iconUri = "/experiences/freelance/grindr/icon.png",
+    media = listOf(
+        Media.Image(
+            uri = "/freelance/grindr/home.png",
+        ),
+        Media.Image(
+            uri = "/freelance/grindr/chat.png",
+        ),
+        Media.Image(
+            uri = "/freelance/grindr/map.png",
+        ),
+    ),
+)
+
 val WALMART = Experience(
     id = 123,
     timespans = listOf(2022 to null),
     name = "Walmart",
     title = "Senior Mobile Solutions Engineer",
     route = "/walmart",
-    summary = "Member of the Android Platform team; designing Gradle build tools to increase developer productivity and ensure tech debt is properly managed. " +
-        "Member of the W+ Engagement and Retention team; building features to improve communication of membership benefits. " +
-        "Member of W+ Account Management team; building features to enhance the account management experience.",
+    summary = "Android Platform Team; designing Gradle build tools to boost developer productivity and ensure tech debt is properly managed. " +
+        "W+ Engagement and Retention Team; building features to improve engagement by enhancing communication of membership benefits. " +
+        "W+ Account Management Team; improving user satisfaction by developing features to enhance the membership settings experience.",
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -58,8 +91,9 @@ val SOCKET = Experience(
     name = "Socket",
     title = "Kotlin Multiplatform",
     route = "/socket",
-    summary = "Building a cross-platform automation platform to allow for extensible control of any device. " +
-        "Creating native Android, iOS, Web, and Desktop clients while leveraging Kotlin Multiplatform, Compose, and SwiftUI for true \"write once, run everywhere\" feature development.",
+    summary = "Developing a cross-platform automation platform capable of extensible control of all of your devices. " +
+            "Creating native applications for Android, iOS, Web, and Desktop by leveraging Kotlin Multiplatform, Compose Multiplatform, and SwiftUI. " +
+            "Prioritizing a \"write once, run everywhere\" architecture for rapid feature development across all client apps simultaneously.",
     category = Category.PROJECT,
     skills = setOf(
         Skill.COMPOSE,
@@ -92,7 +126,7 @@ val STOCK_X = Experience(
     title = "Android Software Engineer II",
     route = "/stockx",
     summary = "Worked in a legacy Java codebase to migrate features into Kotlin using Clean Architecture. " +
-        "Involved in checkout, payment, and internationalization feature work. Responsible for the initial adoption of Jetpack Compose while performing a complete rewrite of the checkout flow.",
+        "Involved in Checkout, Payment, and Internationalization feature work. Responsible for the initial adoption of Jetpack Compose while performing a complete rewrite of the checkout flow.",
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -129,7 +163,7 @@ val SHARPEN = Experience(
     title = "Android Developer",
     route = "/sharpen",
     summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. " +
-        "Delivered a minimum viable direct-to-consumer product for the McGraw Hill -- the world's leading ed-tech company. " +
+        "Delivered a minimum viable direct-to-consumer product in 2022 for McGraw Hill -- the world's leading ed-tech company. " +
         "Rejoined the project in 2023 to work on a cross-platform analytics library implementation for launching v2.",
     category = Category.FREELANCE,
     skills = setOf(
@@ -434,6 +468,7 @@ val GBHS = Experience(
 )
 
 val ALL_EXPERIENCES = listOf(
+    GRINDR,
     WALMART,
     SOCKET,
     SHARPEN,
