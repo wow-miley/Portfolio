@@ -15,6 +15,20 @@ import kotlinx.browser.window
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 
+private fun trackPageView(route: Map<String, String>) {
+    val path = when {
+        route["page"] == "blog" && route.containsKey("post") -> "/blog/${route["post"]}"
+        route["page"] == "blog" -> "/blog"
+        else -> "/"
+    }
+    val gtag = window.asDynamic().gtag
+    if (gtag != null) {
+        val params = js("{}")
+        params.page_path = path
+        gtag("event", "page_view", params)
+    }
+}
+
 fun RenderContext.header() {
     var lastScrollY = window.scrollY
     div("categories") {
@@ -72,6 +86,7 @@ fun main() {
             .data
             .distinctUntilChanged()
             .render { route ->
+                trackPageView(route)
                 val page = route["page"]
 
                 header()
