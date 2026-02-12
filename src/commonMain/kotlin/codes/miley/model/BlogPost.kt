@@ -14,9 +14,9 @@ val DARK_FACTORY = BlogPost(
     id = "dark-factory-needs-windows",
     title = "The Dark Factory Needs Windows",
     subtitle = "Building trust in AI autonomy through transparent cognition",
-    date = "February 2026",
-    publishedDate = "2026-02-11",
-    excerpt = "AI is raising the level of abstraction in software development. But the verification layer keeps pulling humans back down. What if cognition itself was transparent?",
+    date = "February 12, 2026",
+    publishedDate = "2026-02-12",
+    excerpt = "AI is raising the level of abstraction in software development. But the verification layer keeps pulling humans back down. But what if cognition itself was transparent the whole time?",
     content = """
 There's a factory in Japan where robots build other robots in the dark. No lights, no people — just machines making machines. It became shorthand for full automation, but the interesting thing about the dark factory isn't that humans were removed. It's that they were *leveraged*. Engineers who once stood on the assembly line now design the systems that design the robots.
 

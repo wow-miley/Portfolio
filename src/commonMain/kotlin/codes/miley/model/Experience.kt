@@ -23,20 +23,17 @@ val ADYEN = Experience(
     id = 123,
     timespans = listOf(2025 to null),
     name = "Adyen",
-    title = "Android Software Engineer II",
+    title = "Android Engineer",
     route = "/adyen",
     summary = """
         • Working on the in-person payments Android SDK, enabling merchants to accept 
-        payments through Android devices.
+        payments directly on Android phones and tablets.
     """.trimIndent(),
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
         Skill.COMPOSE,
         Skill.JNI,
-        Skill.KOTLIN,
-        Skill.PROTOBUF,
-        Skill.SDK,
     ),
     topics = setOf(
         Topic.PAYMENTS,
@@ -46,7 +43,13 @@ val ADYEN = Experience(
     iconUri = "/experiences/job/adyen/icon.png",
     media = listOf(
         Media.Image(
-            uri = "/job/adyen/sdk.png",
+            uri = "/job/adyen/ttpoa.png",
+        ),
+        Media.Image(
+            uri = "/job/adyen/kiosk.png",
+        ),
+        Media.Image(
+            uri = "/job/adyen/nyc1.png",
         ),
     ),
 )
@@ -68,7 +71,6 @@ val GRINDR = Experience(
     skills = setOf(
         Skill.ANDROID,
         Skill.COMPOSE,
-        Skill.KOTLIN,
         Skill.SQL
     ),
     topics = setOf(
@@ -93,7 +95,7 @@ val WALMART = Experience(
     id = 123,
     timespans = listOf(2022 to 2024),
     name = "Walmart",
-    title = "Senior Mobile Solutions Engineer",
+    title = "Android Engineer",
     route = "/walmart",
     summary = """
         • Android Platform Team; designing Gradle build tools to boost developer productivity 
@@ -133,7 +135,7 @@ val SOCKET = Experience(
     id = 12345,
     timespans = listOf(2021 to null),
     name = "Socket",
-    title = "Founder & Independent Developer",
+    title = "Independent Developer",
     route = "/socket",
     summary = """
         • Developing a cross-platform automation platform capable of extensible control of all of your devices.
@@ -146,10 +148,8 @@ val SOCKET = Experience(
     """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
-        Skill.COMPOSE,
         Skill.KOTLIN_MULTIPLATFORM,
-        Skill.GRAPHQL,
-        Skill.SWIFT_UI,
+        Skill.COMPOSE,
     ),
     topics = setOf(
         Topic.UI,
@@ -173,7 +173,7 @@ val AMPERE = Experience(
     id = 12345,
     timespans = listOf(2024 to null),
     name = "Ampere",
-    title = "Kotlin Multiplatform",
+    title = "Independent Developer",
     route = "/ampere",
     summary = """
         • Developing an event-driven AI agent orchestration framework built with Kotlin Multiplatform.
@@ -186,8 +186,9 @@ val AMPERE = Experience(
     """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
-        Skill.KOTLIN,
+        Skill.AI,
         Skill.KOTLIN_MULTIPLATFORM,
+        Skill.SDK,
     ),
     topics = setOf(
         Topic.AI,
@@ -200,7 +201,7 @@ val STOCK_X = Experience(
     id = 123,
     timespans = listOf(2019 to 2022),
     name = "StockX",
-    title = "Android Software Engineer II",
+    title = "Android Engineer",
     route = "/stockx",
     summary = """
         • Worked in a legacy Java codebase to migrate features into Kotlin using Clean Architecture.
@@ -215,8 +216,6 @@ val STOCK_X = Experience(
         Skill.ANDROID,
         Skill.COMPOSE,
         Skill.KOTLIN,
-        Skill.JAVA,
-        Skill.GRAPHQL,
     ),
     topics = setOf(
         Topic.E_COMMERCE,
@@ -256,10 +255,8 @@ val SHARPEN = Experience(
     """.trimIndent(),
     category = Category.FREELANCE,
     skills = setOf(
-        Skill.ANDROID,
         Skill.COMPOSE,
         Skill.KOTLIN,
-        Skill.KOTLIN_MULTIPLATFORM,
         Skill.GRAPHQL,
     ),
     topics = setOf(
@@ -287,7 +284,7 @@ val TROVE = Experience(
     id = 1234,
     timespans = listOf(2018 to 2019),
     name = "Trove",
-    title = "Android Engineering Intern",
+    title = "Android Engineer Intern",
     route = "/trove",
     summary = """
         • Developed a native Android application in Kotlin using RxJava with a Redux architecture.
@@ -320,7 +317,6 @@ val TROVE = Experience(
             uri = "/job/trove/search_thumb.png",
             gifUri = "/job/trove/search.gif"
         ),
-        Media.Image("/job/trove/chat.png"),
     ),
 )
 
@@ -328,7 +324,7 @@ val HANDOTATE = Experience(
     id = 12345,
     timespans = listOf(2019 to 2019),
     name = "handotate",
-    title = "Native Android & Design",
+    title = "Android / Design",
     route = "/handotate",
     summary = """
         • Used the mvRx library from AirBnb to facilitate rapid iteration of a prototype used for 
@@ -342,7 +338,6 @@ val HANDOTATE = Experience(
         Skill.ANDROID,
         Skill.KOTLIN,
         Skill.SQL,
-        Skill.AWS,
     ),
     topics = setOf(
         Topic.UI,
@@ -393,7 +388,7 @@ val LINELEAP = Experience(
     id = 77,
     timespans = listOf(2018 to 2018),
     name = "LineLeap",
-    title = "React Web & Design",
+    title = "React / Design",
     route = "/lineleap",
     summary = """
         • Integrated with Squarespace orders API to allow event staff to validate a user's digital 
@@ -450,7 +445,7 @@ val TOTEM = Experience(
     id = 12345,
     timespans = listOf(2017 to 2018),
     name = "Totem",
-    title = "Native Android & Design",
+    title = "Android / Design",
     route = "/totem",
     summary = """
         • Developed a native Android application in Kotlin using RxJava and Dagger.
@@ -463,7 +458,6 @@ val TOTEM = Experience(
         Skill.ANDROID,
         Skill.KOTLIN,
         Skill.AWS,
-        Skill.FIREBASE,
     ),
     topics = setOf(
         Topic.UI,
@@ -565,7 +559,7 @@ val GBHS = Experience(
     id = 12345,
     timespans = listOf(2015 to 2016),
     name = "GBHS",
-    title = "Native Android & iOS",
+    title = "Android / iOS",
     route = "/gbhs",
     summary = """
         • Commissioned by the school to build a self-serve school resource app that scraped data from 
@@ -600,18 +594,18 @@ val ALL_EXPERIENCES = listOf(
     STOCK_X,
     TROVE,
     HANDOTATE,
-    MEET_UP,
+//    MEET_UP,
     LINELEAP,
 //    TASKTRACKER,
     TOTEM,
 //    PRESENT,
-    ARTABLETOP,
+//    ARTABLETOP,
 //    MFRAME,
     GBHS,
 )
 
 val FEATURED_EXPERIENCES = listOf(
     ADYEN,
+    AMPERE,
     SOCKET,
-    STOCK_X,
 )

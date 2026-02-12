@@ -190,6 +190,12 @@ button {
     flex-direction: column;
 }
 
+.experience-section h1 {
+    font: 28px 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
 .categories + .experience-section {
     padding-top: 132px;
 }
@@ -523,7 +529,7 @@ button {
 }
 
 .content {
-    padding: 0 20px;
+    padding: 132px 20px 0 20px;
     display: flex;
     flex-direction: column;
 }
