@@ -1,6 +1,7 @@
 package codes.miley.model
 
 enum class Skill(val displayName: String) {
+    AI("AI"),
     ANDROID("Android"),
     ARCORE("ARCore"),
     AWS("AWS"),
