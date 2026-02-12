@@ -1,6 +1,9 @@
 package codes.miley.frontend
 
+import codes.miley.frontend.store.BlogStore
 import codes.miley.frontend.store.ExperienceStore
+import codes.miley.frontend.widget.blogList
+import codes.miley.frontend.widget.blogPostView
 import codes.miley.frontend.widget.experienceList
 import codes.miley.frontend.widget.featuredExperiences
 import codes.miley.model.Category
@@ -18,36 +21,32 @@ fun RenderContext.header(
         h2 { +"Miley Chandonnet" }
         h4 { +"Native Android Application Engineer" }
 
-        // TODO: Add filtering
-        // nav {
-        //     ul {
-        //         Category
-        //             .values()
-        //             .map { it.displayName }
-        //             .forEach { route ->
-        //                 li {
-        //                     a {
-        //                         +route
-        //
-        //                         ExperienceStore.data
-        //                             .map { it.filterConfig?.selectedCategory }
-        //                             .distinctUntilChanged()
-        //                             .render { category ->
-        //                                 className(
-        //                                     if (category?.displayName == route) "selected" else ""
-        //                                 )
-        //                             }
-        //
-        //                         clicks.map {
-        //                             mapOf(
-        //                                 "category" to route
-        //                             )
-        //                         } handledBy router.navTo
-        //                     }
-        //                 }
-        //             }
-        //     }
-        // }
+        nav {
+            ul {
+                li {
+                    a {
+                        className(router.data.map { route ->
+                            if (route["page"] == null) "selected" else ""
+                        }.distinctUntilChanged())
+                        +"Home"
+                        clicks.map {
+                            mapOf("category" to "all")
+                        } handledBy router.navTo
+                    }
+                }
+                li {
+                    a {
+                        className(router.data.map { route ->
+                            if (route["page"] == "blog") "selected" else ""
+                        }.distinctUntilChanged())
+                        +"Blog"
+                        clicks.map {
+                            mapOf("page" to "blog")
+                        } handledBy router.navTo
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -59,18 +58,33 @@ fun main() {
         router
             .data
             .distinctUntilChanged()
-            .render {
-                it["category"]
-                    ?.let(Category::valueOf)
-                    ?.let { category ->
-                        ExperienceStore.setSelectedCategory(category)
-                    }
-            }
+            .render { route ->
+                val page = route["page"]
 
-        div("content") {
-            header(router)
-            featuredExperiences()
-            experienceList()
-        }
+                header(router)
+
+                when {
+                    page == "blog" && route.containsKey("post") -> {
+                        route["post"]?.let { BlogStore.selectPost(it) }
+                        blogPostView()
+                    }
+                    page == "blog" -> {
+                        BlogStore.selectPost(null)
+                        blogList(router)
+                    }
+                    else -> {
+                        route["category"]?.let { name ->
+                            Category.values().find { it.name == name }
+                        }?.let { category ->
+                            ExperienceStore.setSelectedCategory(category)
+                        }
+
+                        div("content") {
+                            featuredExperiences()
+                            experienceList()
+                        }
+                    }
+                }
+            }
     }
 }

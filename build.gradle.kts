@@ -28,6 +28,7 @@ kotlin {
         }
         val jsMain by getting {
             dependencies {
+                implementation(npm("marked", "9.1.6"))
             }
         }
     }
