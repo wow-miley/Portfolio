@@ -146,12 +146,46 @@ button {
     border-color: rgba(175, 47, 47, 0.2);
 }
 
+.categories nav {
+    width: max-content;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.categories nav ul {
+    display: inline-flex;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.categories nav li a {
+    font: 14px 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-radius: 32px;
+    background: #FFF;
+    color: #999999;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin: 0;
+}
+
+.categories nav li a:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+    color: #575757;
+}
+
+.categories nav li a.selected {
+    background: #FF9D2B;
+    color: #FFFFFF;
+    border-color: #FF9D2B;
+}
+
 .experience-section {
-<<<<<<< HEAD
-    padding-top: 24px;
-=======
     padding-top: 40px;
->>>>>>> origin/master
     display: inline-flex;
     flex-direction: column;
 }
@@ -489,11 +523,7 @@ button {
 }
 
 .content {
-<<<<<<< HEAD
-    padding: 0 3vw;
-=======
     padding: 0 20px;
->>>>>>> origin/master
     display: flex;
     flex-direction: column;
 }
