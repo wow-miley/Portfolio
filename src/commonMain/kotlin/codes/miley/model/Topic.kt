@@ -1,6 +1,7 @@
 package codes.miley.model
 
 enum class Topic {
+    AI,
     CHAT,
     DATING,
     E_COMMERCE,
