@@ -5,6 +5,7 @@ enum class Topic {
     DATING,
     E_COMMERCE,
     ED_TECH,
+    PAYMENTS,
     UI,
     UX,
 }
