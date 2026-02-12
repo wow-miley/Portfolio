@@ -28,9 +28,11 @@ Trusting the output from layers beneath you is trickier than if you were buildin
 
 Each team has solved this by adding layers of external verification — test suites, human review on every change, audit logs, monitoring dashboards. All of these methods are just reconstructing what the agent did after the fact. It works — but it means you need to step back down a level of abstraction to validate a large pile of work that you were just freed from doing. Instead of the engineer writing the code, they now spend their time checking a thousand AI-written changes weekly. The promise of maximizing our leverage keeps getting pulled back by the need to verify implementation details.
 
-## Windows, not dashboards
+## Windows, not mirrors
 
 There's a different approach — I've been working on building it for the past three years.
+
+![Demo](/blog/dark-factory-needs-windows/demo.gif)
 
 Instead of verifying an opaque AI process from outside, what if the cognition itself was transparent in the first place? In [AMPERE](https://github.com/socket-link/ampere), every phase of agent reasoning — perception, recall, optimization, planning, execution, and coordination — emits structured events as a natural consequence of its design. Not just logs being added after the fact, but thinking that you can observe as it forms.
 
