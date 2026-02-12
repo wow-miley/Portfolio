@@ -1,6 +1,7 @@
 package codes.miley.frontend
 
 import codes.miley.frontend.store.BlogStore
+import codes.miley.model.ALL_POSTS
 import codes.miley.frontend.store.ExperienceStore
 import codes.miley.frontend.widget.blogList
 import codes.miley.frontend.widget.blogPostView
@@ -11,6 +12,7 @@ import dev.fritz2.core.RenderContext
 import dev.fritz2.core.render
 import dev.fritz2.routing.Router
 import dev.fritz2.routing.routerOf
+import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
@@ -88,6 +90,15 @@ fun main() {
             .render { route ->
                 trackPageView(route)
                 val page = route["page"]
+
+                document.title = when {
+                    page == "blog" && route.containsKey("post") -> {
+                        val post = ALL_POSTS.find { it.id == route["post"] }
+                        post?.title?.let { "$it | Miley Chandonnet" } ?: "Miley Chandonnet"
+                    }
+                    page == "blog" -> "Blog | Miley Chandonnet"
+                    else -> "Miley Chandonnet"
+                }
 
                 header()
 
