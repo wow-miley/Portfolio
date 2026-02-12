@@ -11,13 +11,24 @@ import dev.fritz2.core.RenderContext
 import dev.fritz2.core.render
 import dev.fritz2.routing.Router
 import dev.fritz2.routing.routerOf
+import kotlinx.browser.window
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 
 fun RenderContext.header(
     router: Router<Map<String, String>>,
 ) {
+    var lastScrollY = window.scrollY
     div("categories") {
+        window.addEventListener("scroll", {
+            val currentScrollY = window.scrollY
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                domNode.classList.add("hidden")
+            } else {
+                domNode.classList.remove("hidden")
+            }
+            lastScrollY = currentScrollY
+        })
         h2 { +"Miley Chandonnet" }
         h4 { +"Native Android Application Engineer" }
 
