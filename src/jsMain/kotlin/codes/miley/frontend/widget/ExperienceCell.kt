@@ -4,6 +4,7 @@ import codes.miley.model.Experience
 import dev.fritz2.core.RenderContext
 import dev.fritz2.core.src
 
+
 private val Experience.dateRanges: List<String>
     get() = timespans.map { (startYear, endYear) ->
         when {
@@ -56,7 +57,14 @@ fun RenderContext.experienceCell(
                     experienceGallery(media)
                 }
 
-                p("experience-info") { +summary }
+                ul("experience-info") {
+                    summary.split(". ").filter { it.isNotBlank() }.forEach { point ->
+                        li("experience-bullet") {
+                            span("bullet-icon") { }
+                            p { +point.trimEnd('.') }
+                        }
+                    }
+                }
             }
         }
     }
