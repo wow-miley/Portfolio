@@ -687,6 +687,21 @@ button {
     }
 }
 
+@media (max-width: 640px) {
+    html,
+    body {
+        padding: 0 8px;
+    }
+
+    .content {
+        padding: 0 8px;
+    }
+
+    .info {
+        padding: 24px 4vw;
+    }
+}
+
 @media (max-width: 430px) {
     .footer {
         height: 50px;
