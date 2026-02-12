@@ -12,7 +12,7 @@ fun RenderContext.blogList(router: Router<Map<String, String>>) {
             section("blog-hero") {
                 h1 { +"Blog" }
                 p("subtitle") {
-                    +"Thoughts on observable AI cognition, agentic management architecture, and building responsible software that operates transparently."
+                    +"My thoughts on observable AI cognition, agentic management architecture, and building responsible software that operates transparently."
                 }
             }
 

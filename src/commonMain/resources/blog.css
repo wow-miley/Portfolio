@@ -9,7 +9,7 @@
 /* — Blog Index — */
 
 .blog-page .blog-hero {
-  padding-top: 164px;
+  padding-top: 24px;
   margin-bottom: 2rem;
 }
 
@@ -84,7 +84,7 @@
 /* — Article — */
 
 .blog-page .article-header {
-  padding-top: 164px;
+  padding-top: 24px;
   margin-bottom: 2rem;
 }
 
@@ -203,10 +203,9 @@
 /* — Responsive — */
 
 @media (max-width: 640px) {
-  .blog-page .blog-hero { padding-top: 100px; }
   .blog-page .blog-hero h1 { font-size: 24px; }
 
-  .blog-page .article-header { padding-top: 100px; }
+  .blog-page .article-header { padding-top: 16px; }
   .blog-page .article-header h1 { font-size: 24px; }
 
   .blog-page .article-body h2 { font-size: 18px; }

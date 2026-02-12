@@ -26,14 +26,20 @@ val ADYEN = Experience(
     title = "Android Engineer",
     route = "/adyen",
     summary = """
-        • Working on the in-person payments Android SDK, enabling merchants to accept 
-        payments directly on Android phones and tablets.
+        • Working on the in-person payments Android SDK, allowing merchants to accept
+        payments directly on their Android phones and tablets.
+
+        • Contributing to the design and development of a modern Compose-based UI toolkit
+        for point-of-sale terminal interfaces.
+
+        • Collaborating across global teams to ensure seamless integration of payment flows across
+        a diverse range of Android device form factors.
     """.trimIndent(),
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
         Skill.COMPOSE,
-        Skill.JNI,
+        Skill.SDK,
     ),
     topics = setOf(
         Topic.PAYMENTS,
@@ -46,10 +52,10 @@ val ADYEN = Experience(
             uri = "/job/adyen/ttpoa.png",
         ),
         Media.Image(
-            uri = "/job/adyen/kiosk.png",
+            uri = "/job/adyen/nyc1.png",
         ),
         Media.Image(
-            uri = "/job/adyen/nyc1.png",
+            uri = "/job/adyen/kiosk.png",
         ),
     ),
 )
@@ -61,11 +67,14 @@ val GRINDR = Experience(
     title = "Android Developer",
     route = "/grindr",
     summary = """
-        • Enhancing customer satisfaction and retention by boosting engagement through 
+        • Enhanced customer satisfaction and retention by boosting engagement through 
         IAP-based user experiences.
         
-        • Focusing on map driven user interactions, which includes using Google Maps APIs 
+        • Focused on map driven user interactions, which includes using Google Maps APIs
         for location tagging and custom overlay drawing.
+
+        • Implemented performant SQL-backed data layers to support offline-capable profile
+        and messaging features.
     """.trimIndent(),
     category = Category.FREELANCE,
     skills = setOf(
@@ -98,13 +107,13 @@ val WALMART = Experience(
     title = "Android Engineer",
     route = "/walmart",
     summary = """
-        • Android Platform Team; designing Gradle build tools to boost developer productivity 
+        • Android Platform Team; designed Gradle build tools to boost developer productivity 
         and ensure tech debt is properly managed.
         
-        • W+ Engagement and Retention Team; building features to improve engagement by 
+        • W+ Engagement and Retention Team; built features to improve engagement by 
         enhancing communication of membership benefits.
         
-        • W+ Account Management Team; improving user satisfaction by developing features 
+        • W+ Account Management Team; improved user satisfaction by developing features 
         to enhance the membership settings experience.
     """.trimIndent(),
     category = Category.JOB,
@@ -289,8 +298,11 @@ val TROVE = Experience(
     summary = """
         • Developed a native Android application in Kotlin using RxJava with a Redux architecture.
         
-        • Focused on UI/UX implementation of features including reusable components, animations, and 
+        • Focused on UI/UX implementation of features including reusable components, animations, and
         development of a platform style guide.
+
+        • Contributed to building a chat-based professional referral platform, including real-time messaging
+        features and sharing capabilities.
     """.trimIndent(),
     category = Category.JOB,
     skills = setOf(
@@ -330,8 +342,11 @@ val HANDOTATE = Experience(
         • Used the mvRx library from AirBnb to facilitate rapid iteration of a prototype used for 
         annotating ML training datasets.
         
-        • Included the ability to keyframe multiple bounding boxes on videos, and then interpolate 
+        • Included the ability to keyframe multiple bounding boxes on videos, and then interpolate
         for labelling a moving object.
+
+        • Designed and implemented the UI for navigating, editing, and managing annotation
+        projects backed by a local SQL database.
     """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
@@ -391,8 +406,14 @@ val LINELEAP = Experience(
     title = "React / Design",
     route = "/lineleap",
     summary = """
-        • Integrated with Squarespace orders API to allow event staff to validate a user's digital 
+        • Integrated with Squarespace orders API to allow event staff to validate a user's digital
         ticket purchase.
+
+        • Built the frontend using React with a focus on delivering a fast, mobile-friendly
+        ticket validation experience for door staff at the venues.
+
+        • Deployed the application on AWS infrastructure to ensure reliable performance during
+        high-traffic event nights.
     """.trimIndent(),
     category = Category.FREELANCE,
     skills = setOf(
@@ -450,8 +471,11 @@ val TOTEM = Experience(
     summary = """
         • Developed a native Android application in Kotlin using RxJava and Dagger.
         
-        • Also responsible for the UI design, API design, and overall technology management of 
+        • Also responsible for the UI design, API design, and overall technology management of
         the company.
+
+        • Built social feed and content sharing features, enabling users to post and interact
+        within private and public communities.
     """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
@@ -562,8 +586,14 @@ val GBHS = Experience(
     title = "Android / iOS",
     route = "/gbhs",
     summary = """
-        • Commissioned by the school to build a self-serve school resource app that scraped data from 
+        • Commissioned by the school to build a self-serve school resources app that scraped data from
         the official website.
+
+        • Built natively for both Android (Java) and iOS (Objective-C), providing students access
+        to schedules, calendars, and school announcements.
+        
+        • Designed and implemented a custom calendar UI element for the app, allowing users to view 
+        upcoming events in a single glance.
     """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(

@@ -15,9 +15,7 @@ import kotlinx.browser.window
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 
-fun RenderContext.header(
-    router: Router<Map<String, String>>,
-) {
+fun RenderContext.header() {
     var lastScrollY = window.scrollY
     div("categories") {
         window.addEventListener("scroll", {
@@ -31,30 +29,34 @@ fun RenderContext.header(
         })
         h2 { +"Miley Chandonnet" }
         h4 { +"Native Android Application Engineer" }
+    }
+}
 
-        nav {
-            ul {
-                li {
-                    a {
-                        className(router.data.map { route ->
-                            if (route["page"] == null) "selected" else ""
-                        }.distinctUntilChanged())
-                        +"Home"
-                        clicks.map {
-                            mapOf("category" to "all")
-                        } handledBy router.navTo
-                    }
+fun RenderContext.pageNav(
+    router: Router<Map<String, String>>,
+) {
+    nav("page-nav") {
+        ul {
+            li {
+                a {
+                    className(router.data.map { route ->
+                        if (route["page"] == null) "selected" else ""
+                    }.distinctUntilChanged())
+                    +"Home"
+                    clicks.map {
+                        mapOf("category" to "all")
+                    } handledBy router.navTo
                 }
-                li {
-                    a {
-                        className(router.data.map { route ->
-                            if (route["page"] == "blog") "selected" else ""
-                        }.distinctUntilChanged())
-                        +"Blog"
-                        clicks.map {
-                            mapOf("page" to "blog")
-                        } handledBy router.navTo
-                    }
+            }
+            li {
+                a {
+                    className(router.data.map { route ->
+                        if (route["page"] == "blog") "selected" else ""
+                    }.distinctUntilChanged())
+                    +"Blog"
+                    clicks.map {
+                        mapOf("page" to "blog")
+                    } handledBy router.navTo
                 }
             }
         }
@@ -72,7 +74,9 @@ fun main() {
             .render { route ->
                 val page = route["page"]
 
-                header(router)
+                header()
+
+                pageNav(router)
 
                 when {
                     page == "blog" && route.containsKey("post") -> {
