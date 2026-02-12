@@ -19,14 +19,51 @@ data class Experience(
     companion object
 }
 
+val ADYEN = Experience(
+    id = 123,
+    timespans = listOf(2025 to null),
+    name = "Adyen",
+    title = "Android Software Engineer II",
+    route = "/adyen",
+    summary = """
+        • Working on the in-person payments Android SDK, enabling merchants to accept 
+        payments through Android devices.
+    """.trimIndent(),
+    category = Category.JOB,
+    skills = setOf(
+        Skill.ANDROID,
+        Skill.COMPOSE,
+        Skill.JNI,
+        Skill.KOTLIN,
+        Skill.PROTOBUF,
+        Skill.SDK,
+    ),
+    topics = setOf(
+        Topic.PAYMENTS,
+        Topic.UI,
+        Topic.UX,
+    ),
+    iconUri = "/experiences/job/adyen/icon.png",
+    media = listOf(
+        Media.Image(
+            uri = "/job/adyen/sdk.png",
+        ),
+    ),
+)
+
 val GRINDR = Experience(
     id = 123,
-    timespans = listOf(2023 to null),
+    timespans = listOf(2023 to 2024),
     name = "Grindr",
     title = "Android Developer",
     route = "/grindr",
-    summary = "Enhancing customer satisfaction and retention by boosting engagement through IAP-based user experiences. " +
-        "Focusing on map driven user interactions, which includes using Google Maps APIs for location tagging and custom overlay drawing.",
+    summary = """
+        • Enhancing customer satisfaction and retention by boosting engagement through 
+        IAP-based user experiences.
+        
+        • Focusing on map driven user interactions, which includes using Google Maps APIs 
+        for location tagging and custom overlay drawing.
+    """.trimIndent(),
     category = Category.FREELANCE,
     skills = setOf(
         Skill.ANDROID,
@@ -54,13 +91,20 @@ val GRINDR = Experience(
 
 val WALMART = Experience(
     id = 123,
-    timespans = listOf(2022 to null),
+    timespans = listOf(2022 to 2024),
     name = "Walmart",
     title = "Senior Mobile Solutions Engineer",
     route = "/walmart",
-    summary = "Android Platform Team; designing Gradle build tools to boost developer productivity and ensure tech debt is properly managed. " +
-        "W+ Engagement and Retention Team; building features to improve engagement by enhancing communication of membership benefits. " +
-        "W+ Account Management Team; improving user satisfaction by developing features to enhance the membership settings experience.",
+    summary = """
+        • Android Platform Team; designing Gradle build tools to boost developer productivity 
+        and ensure tech debt is properly managed.
+        
+        • W+ Engagement and Retention Team; building features to improve engagement by 
+        enhancing communication of membership benefits.
+        
+        • W+ Account Management Team; improving user satisfaction by developing features 
+        to enhance the membership settings experience.
+    """.trimIndent(),
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -89,11 +133,17 @@ val SOCKET = Experience(
     id = 12345,
     timespans = listOf(2021 to null),
     name = "Socket",
-    title = "Kotlin Multiplatform",
+    title = "Founder & Independent Developer",
     route = "/socket",
-    summary = "Developing a cross-platform automation platform capable of extensible control of all of your devices. " +
-            "Creating native applications for Android, iOS, Web, and Desktop by leveraging Kotlin Multiplatform, Compose Multiplatform, and SwiftUI. " +
-            "Prioritizing a \"write once, run everywhere\" architecture for rapid feature development across all client apps simultaneously.",
+    summary = """
+        • Developing a cross-platform automation platform capable of extensible control of all of your devices.
+        
+        • Creating native applications for Android, iOS, Web, and Desktop by leveraging Kotlin Multiplatform, 
+        Compose Multiplatform, and SwiftUI.
+        
+        • Prioritizing a "write once, run everywhere" architecture for rapid feature development across all 
+        client apps simultaneously.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.COMPOSE,
@@ -125,8 +175,14 @@ val STOCK_X = Experience(
     name = "StockX",
     title = "Android Software Engineer II",
     route = "/stockx",
-    summary = "Worked in a legacy Java codebase to migrate features into Kotlin using Clean Architecture. " +
-        "Involved in Checkout, Payment, and Internationalization feature work. Responsible for the initial adoption of Jetpack Compose while performing a complete rewrite of the checkout flow.",
+    summary = """
+        • Worked in a legacy Java codebase to migrate features into Kotlin using Clean Architecture.
+        
+        • Involved in Checkout, Payment, and Internationalization feature work.
+        
+        • Responsible for the initial adoption of Jetpack Compose while performing a complete rewrite 
+        of the checkout flow.
+    """.trimIndent(),
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -162,9 +218,15 @@ val SHARPEN = Experience(
     name = "Sharpen",
     title = "Android Developer",
     route = "/sharpen",
-    summary = "Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL. " +
-        "Delivered a minimum viable direct-to-consumer product in 2022 for McGraw Hill -- the world's leading ed-tech company. " +
-        "Rejoined the project in 2023 to work on a cross-platform analytics library implementation for launching v2.",
+    summary = """
+        • Architected a native Android app using Jetpack Compose, Coroutines, MVU, and GraphQL.
+        
+        • Delivered a minimum viable direct-to-consumer product in 2022 for McGraw Hill -- the world's 
+        leading ed-tech company.
+        
+        • Rejoined the project in 2023 to work on a cross-platform analytics library implementation 
+        for launching v2.
+    """.trimIndent(),
     category = Category.FREELANCE,
     skills = setOf(
         Skill.ANDROID,
@@ -200,8 +262,12 @@ val TROVE = Experience(
     name = "Trove",
     title = "Android Engineering Intern",
     route = "/trove",
-    summary = "Developed a native Android application in Kotlin using RxJava with a Redux architecture. " +
-        "Focused on UI/UX implementation of features including reusable components, animations, and development of a platform style guide.",
+    summary = """
+        • Developed a native Android application in Kotlin using RxJava with a Redux architecture.
+        
+        • Focused on UI/UX implementation of features including reusable components, animations, and 
+        development of a platform style guide.
+    """.trimIndent(),
     category = Category.JOB,
     skills = setOf(
         Skill.ANDROID,
@@ -237,8 +303,13 @@ val HANDOTATE = Experience(
     name = "handotate",
     title = "Native Android & Design",
     route = "/handotate",
-    summary = "Used the mvRx library from AirBnb to facilitate rapid iteration of a prototype used for annotating ML training datasets. " +
-        "Included the ability to keyframe multiple bounding boxes on videos, and then interpolate for labelling a moving object.",
+    summary = """
+        • Used the mvRx library from AirBnb to facilitate rapid iteration of a prototype used for 
+        annotating ML training datasets.
+        
+        • Included the ability to keyframe multiple bounding boxes on videos, and then interpolate 
+        for labelling a moving object.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.ANDROID,
@@ -267,7 +338,10 @@ val MEET_UP = Experience(
     name = "Meet^",
     title = "React Native & Design",
     route = "/meet_up",
-    summary = "Used React Native and Firebase to build a realtime chat app for making spontaneous plans with friends.",
+    summary = """
+        • Used React Native and Firebase to build a realtime chat app for making spontaneous plans 
+        with friends.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.REACT_NATIVE,
@@ -294,7 +368,10 @@ val LINELEAP = Experience(
     name = "LineLeap",
     title = "React Web & Design",
     route = "/lineleap",
-    summary = "Integrated with Squarespace orders API to allow event staff to validate a user's digital ticket purchase.",
+    summary = """
+        • Integrated with Squarespace orders API to allow event staff to validate a user's digital 
+        ticket purchase.
+    """.trimIndent(),
     category = Category.FREELANCE,
     skills = setOf(
         Skill.REACT,
@@ -319,8 +396,11 @@ val TASKTRACKER = Experience(
     name = "TaskTracker",
     title = "React Web & Design",
     route = "/task_tracker",
-    summary = "Focused on the product design of a Kanban style homework tracking web app. " +
-        "Built out the proper infrastructure to allow for user testing to validate MVP.",
+    summary = """
+        • Focused on the product design of a Kanban style homework tracking web app.
+        
+        • Built out the proper infrastructure to allow for user testing to validate MVP.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.REACT,
@@ -345,8 +425,12 @@ val TOTEM = Experience(
     name = "Totem",
     title = "Native Android & Design",
     route = "/totem",
-    summary = "Developed a native Android application in Kotlin using RxJava and Dagger. " +
-        "Also responsible for the UI design, API design, and overall technology management of the company.",
+    summary = """
+        • Developed a native Android application in Kotlin using RxJava and Dagger.
+        
+        • Also responsible for the UI design, API design, and overall technology management of 
+        the company.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.ANDROID,
@@ -372,7 +456,10 @@ val PRESENT = Experience(
     name = "Present VR",
     title = "Unity & node.js",
     route = "/present",
-    summary = "Created an SDK for Unity to allow for dynamic insertion of gamified ad experiences within any given VR experience.",
+    summary = """
+        • Created an SDK for Unity to allow for dynamic insertion of gamified ad experiences within 
+        any given VR experience.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.UNITY,
@@ -396,7 +483,10 @@ val ARTABLETOP = Experience(
     name = "ARTabletop",
     title = "Unity & Android ARCore",
     route = "/artabletop",
-    summary = "Built the backend to allow for realtime remote D&D gameplay through a shared interactive AR game board.",
+    summary = """
+        • Built the backend to allow for realtime remote D&D gameplay through a shared interactive 
+        AR game board.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.UNITY,
@@ -422,7 +512,10 @@ val MFRAME = Experience(
     name = "mFrame",
     title = "A-Frame WebVR",
     route = "/mframe",
-    summary = "Built the backend for a web-based VR social network, where users could customize a virtual space to express themselves.",
+    summary = """
+        • Built the backend for a web-based VR social network, where users could customize a virtual 
+        space to express themselves.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.HTML,
@@ -447,7 +540,10 @@ val GBHS = Experience(
     name = "GBHS",
     title = "Native Android & iOS",
     route = "/gbhs",
-    summary = "Commissioned by the school to build a self-serve school resource app that scraped data from the official website.",
+    summary = """
+        • Commissioned by the school to build a self-serve school resource app that scraped data from 
+        the official website.
+    """.trimIndent(),
     category = Category.PROJECT,
     skills = setOf(
         Skill.ANDROID,
@@ -468,6 +564,7 @@ val GBHS = Experience(
 )
 
 val ALL_EXPERIENCES = listOf(
+    ADYEN,
     GRINDR,
     WALMART,
     SOCKET,
@@ -477,16 +574,16 @@ val ALL_EXPERIENCES = listOf(
     HANDOTATE,
     MEET_UP,
     LINELEAP,
-    TASKTRACKER,
+//    TASKTRACKER,
     TOTEM,
-    PRESENT,
+//    PRESENT,
     ARTABLETOP,
-    MFRAME,
+//    MFRAME,
     GBHS,
 )
 
 val FEATURED_EXPERIENCES = listOf(
+    ADYEN,
     SOCKET,
-    WALMART,
-    SHARPEN,
+    STOCK_X,
 )

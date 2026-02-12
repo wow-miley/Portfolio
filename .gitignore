@@ -5,6 +5,7 @@ build/
 !**/src/main/**
 !**/src/test/**
 *.DS_STORE
+local.properties
 
 ### STS ###
 .apt_generated

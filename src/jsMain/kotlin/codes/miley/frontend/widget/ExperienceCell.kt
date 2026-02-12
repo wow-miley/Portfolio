@@ -4,6 +4,7 @@ import codes.miley.model.Experience
 import dev.fritz2.core.RenderContext
 import dev.fritz2.core.src
 
+
 private val Experience.dateRanges: List<String>
     get() = timespans.map { (startYear, endYear) ->
         when {
@@ -31,21 +32,29 @@ fun RenderContext.experienceCell(
                     }
 
                     div("experience-header col") {
-                        div("experience-header title-row") {
-                            h1("experience-header title") { +name }
-                            dateRanges.forEach { range ->
-                                h6("date-range $isActive") { +range }
+                        div("title-description") {
+                            div("experience-header title-row") {
+                                h1("experience-header title") { +name }
+                                dateRanges.forEach { range ->
+                                    h6("date-range $isActive") { +range }
+                                }
                             }
+                            h5 { +title }
                         }
+                    }
+                }
 
-                        h5 { +title }
-
-                        div("tags ${category.name.lowercase()}") {
-                            h6 { +category.displayName }
-
-                            skills.forEach { skill ->
-                                div("skill") {
-                                    h6 { +skill.displayName }
+                div("tags ${category.name.lowercase()}") {
+                    h6 {
+                        span {
+                            +category.displayName
+                        }
+                    }
+                    skills.forEach { skill ->
+                        div("skill") {
+                            h6 { 
+                                span {
+                                    +skill.displayName
                                 }
                             }
                         }
@@ -56,7 +65,14 @@ fun RenderContext.experienceCell(
                     experienceGallery(media)
                 }
 
-                p("experience-info") { +summary }
+                ul("experience-info") {
+                    summary.split("•").map { it.trim() }.filter { it.isNotBlank() }.forEach { point ->
+                        li("experience-bullet") {
+                            span("bullet-icon") { }
+                            p { +point }
+                        }
+                    }
+                }
             }
         }
     }
