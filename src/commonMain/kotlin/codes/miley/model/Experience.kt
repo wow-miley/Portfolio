@@ -169,6 +169,33 @@ val SOCKET = Experience(
     ),
 )
 
+val AMPERE = Experience(
+    id = 12345,
+    timespans = listOf(2024 to null),
+    name = "Ampere",
+    title = "Kotlin Multiplatform",
+    route = "/ampere",
+    summary = """
+        • Developing an event-driven AI agent orchestration framework built with Kotlin Multiplatform.
+
+        • Featuring a six-phase cognitive loop (PROPEL) with structured event emission for full
+        observability into agent reasoning.
+
+        • Enabling multi-agent coordination where agents perceive and react to each other's
+        reasoning in real time.
+    """.trimIndent(),
+    category = Category.PROJECT,
+    skills = setOf(
+        Skill.KOTLIN,
+        Skill.KOTLIN_MULTIPLATFORM,
+    ),
+    topics = setOf(
+        Topic.AI,
+    ),
+    iconUri = "/experiences/project/ampere/icon.png",
+    media = listOf(),
+)
+
 val STOCK_X = Experience(
     id = 123,
     timespans = listOf(2019 to 2022),
@@ -568,6 +595,7 @@ val ALL_EXPERIENCES = listOf(
     GRINDR,
     WALMART,
     SOCKET,
+    AMPERE,
     SHARPEN,
     STOCK_X,
     TROVE,
