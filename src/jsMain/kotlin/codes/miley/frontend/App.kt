@@ -16,6 +16,25 @@ import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
+import org.w3c.dom.HTMLMetaElement
+
+private fun setMetaTag(attrName: String, attrValue: String, content: String) {
+    val selector = "meta[$attrName=\"$attrValue\"]"
+    val element = document.querySelector(selector) as? HTMLMetaElement
+    if (element != null) {
+        element.content = content
+    }
+}
+
+private fun updateMetaTags(title: String, description: String, url: String, image: String) {
+    setMetaTag("property", "og:title", title)
+    setMetaTag("property", "og:description", description)
+    setMetaTag("property", "og:url", url)
+    setMetaTag("property", "og:image", image)
+    setMetaTag("name", "twitter:title", title)
+    setMetaTag("name", "twitter:description", description)
+    setMetaTag("name", "twitter:image", image)
+}
 
 private fun trackPageView(route: Map<String, String>) {
     val path = when {
@@ -91,13 +110,42 @@ fun main() {
                 trackPageView(route)
                 val page = route["page"]
 
-                document.title = when {
+                when {
                     page == "blog" && route.containsKey("post") -> {
                         val post = ALL_POSTS.find { it.id == route["post"] }
-                        post?.title?.let { "$it | Miley Chandonnet" } ?: "Miley Chandonnet"
+                        if (post != null) {
+                            document.title = "${post.title} | Miley Chandonnet"
+                            updateMetaTags(
+                                title = post.title,
+                                description = post.excerpt,
+                                url = "https://miley.codes/#page=blog&post=${post.id}",
+                                image = "https://miley.codes/blog/${post.id}/demo.gif",
+                            )
+                            setMetaTag("property", "og:type", "article")
+                        } else {
+                            document.title = "Miley Chandonnet"
+                        }
                     }
-                    page == "blog" -> "Blog | Miley Chandonnet"
-                    else -> "Miley Chandonnet"
+                    page == "blog" -> {
+                        document.title = "Blog | Miley Chandonnet"
+                        updateMetaTags(
+                            title = "Blog | Miley Chandonnet",
+                            description = "Native Android Application Engineer",
+                            url = "https://miley.codes/#page=blog",
+                            image = "https://miley.codes/blog/dark-factory-needs-windows/demo.gif",
+                        )
+                        setMetaTag("property", "og:type", "website")
+                    }
+                    else -> {
+                        document.title = "Miley Chandonnet"
+                        updateMetaTags(
+                            title = "Miley Chandonnet",
+                            description = "Native Android Application Engineer",
+                            url = "https://miley.codes",
+                            image = "https://miley.codes/blog/dark-factory-needs-windows/demo.gif",
+                        )
+                        setMetaTag("property", "og:type", "website")
+                    }
                 }
 
                 header()
